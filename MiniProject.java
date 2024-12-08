@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 // Class to store credentials
+
 class Crenditals {
 
     private String Name;
@@ -10,6 +11,7 @@ class Crenditals {
     // Constructor
 
     // Setter method to update all fields
+
     void setAll(String Name, String Password, long Phone) {
         this.Name = Name;
         this.Password = Password;
@@ -17,6 +19,7 @@ class Crenditals {
     }
 
     // Getter methods
+
     String getName() {
         return Name;
     }
@@ -33,13 +36,13 @@ class Crenditals {
     public boolean validate(String inputUsername, String inputPassword, long inputPhone) {
         return inputUsername.equals(Name) && inputPassword.equals(Password) && inputPhone == Phone;
     }
+
 }
 
 // Class to handle user operations
 class Credit {
 
     static Scanner sc = new Scanner(System.in);
-
     // ANSI escape codes for colors
     public static final String RESET = "\u001B[0m";
     public static final String GREEN = "\u001B[32m";
@@ -50,9 +53,9 @@ class Credit {
     public static final String RED = "\u001B[91m";
     public static final String BRIGHTCYAN = "\u001B[96m";
     public static final String BRIGHTMAGENTA = "\u001B[95m";
-    public static final String BRIGHTYELLOW = "\u001B[93m";
 
     public static void cred() {
+
         Scanner scanner = new Scanner(System.in);
 
         // Create a User object
@@ -60,6 +63,7 @@ class Credit {
 
         while (true) {
             // Display options
+
             System.out.println("\n");
             System.out.println(YELLOW
                     + "                    --------------------------------------------------------------------------------------------------------------------- ");
@@ -78,12 +82,13 @@ class Credit {
             System.out.println("");
             System.out.println("" + RESET);
             System.out.println();
-
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
             if (choice == 1) {
+
                 System.out.println();
+
                 // Sign Up
                 System.out.println(GREEN + "\t\t\t\t\t\t\t" + "     Enter the Details to Sign Up:" + "\n" + RESET);
                 System.out.print(GREEN + "\t\t\t\t\t\t\t\t" + "   Enter Username " + "\n" + RESET);
@@ -93,11 +98,14 @@ class Credit {
                 System.out.print(GREEN + "\t\t\t\t\t\t\t\t" + "   Enter Phone Number " + "\n" + RESET);
                 long Phone = scanner.nextLong();
 
-                // Setter
+                // .Setter..................................................................
+
                 crendital.setAll(Name, Password, Phone);
+                // ........................................................................
 
                 System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t" + "  Sign Up successful! You can now sign in.");
                 System.out.println();
+                System.out.println("");
                 System.out.println(YELLOW
                         + "                    --------------------------------------------------------------------------------------------------------------------- ");
                 System.out.println(YELLOW + "             	   |" + BRIGHTMAGENTA + "\t\t\t\t\t\t"
@@ -131,7 +139,9 @@ class Credit {
                 System.out.println();
                 System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t" + "     'SIGNIN'" + RESET + CYAN
                         + " IF YOU HAVE ALREADY" + RESET + BRIGHTCYAN + " 'SIGNUP'" + RESET);
+
             } else if (choice == 2) {
+
                 // Sign In
                 if (crendital.getName() == null) {
                     System.out.println(MAGENTA + "\t\t\t\t\t\t\t" + "No account found. Please SignUp first.");
@@ -155,20 +165,19 @@ class Credit {
             } else if (choice == 3) {
                 // Exit the application
                 System.out.println(RED + "\t\t\t\t\t\t\t" + "   Exiting the application. Goodbye!" + RESET);
-                return; // Exit the method and return to the main program
+                break;
             } else {
                 System.out.println(RED + "\t\t\t\t\t\t\t" + "Invalid option. Please select 1, 2, or 3." + RESET);
             }
         }
+	
+
     }
 }
-
 // Class Source - Destination
 class Source extends Credit {
 
     public static void source() {
-        Date date = new Date();
-
         while (true) {
             // Display options
             System.out.println("\n");
@@ -193,66 +202,158 @@ class Source extends Credit {
             int choice = sc.nextInt();
             sc.nextLine(); // Consume newline
 
-            System.out.println();
             switch (choice) {
                 case 1:
-                    // List all flights
-                    System.out.println(GREEN
-                            + "\t\t\t\t\t\t\t" + "Displaying all available flights...");
-                    // Implementation to list flights
+                    // Display available flights
+                    System.out.println(BRIGHTCYAN + "\t\t\t\t   ..............................Flights that are Available are.............................." + RESET);
+                    System.out.println();
+
+                    System.out.println(YELLOW + "                    --------------------------------------------------------------------------------------------------------------------");
+                    System.out.println("             	   |                                                                                                                 	|");
+                    System.out.println("            	   |     " + Blue + "\t\t  S.No.\t Flight No.\tFrom \t  To   \t Arrival Time \t  Departure Time    " + RESET + YELLOW + " 	                |");
+                    System.out.println("             	   |                                                                                                                 	|");
+                    System.out.println("            	   |     " + GREEN + " \t\t  1\t   AI101      New York \t London     06:30AM    \t     02:00AM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("             	   |                                                                                                                 	|");
+                    System.out.println("            	   |     " + GREEN + " \t\t  2\t   EK202      Dubai \t Mumbai     11:45PM    \t     09:30PM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("             	   |                                                                                                                 	|");
+                    System.out.println("            	   |     " + GREEN + " \t\t  3\t   SQ404      Singapore  Sydney     09:00PM    \t     05:30PM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("             	   |                                                                                                                 	|");
+                    System.out.println("            	   |     " + GREEN + " \t\t  4\t   BA303      London     Paris      08:15AM   \t     06:50AM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("             	   |                                                                                                                 	|");
+                    System.out.println("                   ---------------------------------------------------------------------------------------------------------------------- ");
+                    System.out.println("");
+                    System.out.println("" + RESET);
+                    System.out.println();
+                    // Continue to the next step
                     break;
+
                 case 2:
                     // Search for a flight
-                    System.out.println(GREEN + "\t\t\t\t\t\t\t" + "Enter destination:");
-                    String destination = sc.nextLine();
-                    System.out.println(GREEN + "\t\t\t\t\t\t\t" + "Searching for flights to " + destination + "...");
-                    // Implementation to search for flights
+                    while (true) {
+                System.out.print(MAGENTA + "\t\t\t\t\t\t\t\t" + "   Enter Source " + "\n" + RESET);
+                        String src = sc.nextLine();
+                System.out.print(MAGENTA + "\t\t\t\t\t\t\t\t" + "   Enter Destination " + "\n" + RESET);
+                        String dst = sc.nextLine();
+
+                        if (src.equalsIgnoreCase("New York") && dst.equalsIgnoreCase("London")) {
+                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is AI101.............................." + RESET);
+                            break;
+                        } else if (src.equalsIgnoreCase("Dubai") && dst.equalsIgnoreCase("Mumbai")) {
+                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is EK202.............................." + RESET);
+                            break;
+                        } else if (src.equalsIgnoreCase("Singapore") && dst.equalsIgnoreCase("Sydney")) {
+                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is SQ404.............................." + RESET);
+                            break;
+                        } else if (src.equalsIgnoreCase("London") && dst.equalsIgnoreCase("Paris")) {
+                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is BA303.............................." + RESET);
+                            break;
+                        } else {
+                            System.out.println("Enter the flights which are present on board");
+                        }
+                    }
                     break;
+
                 case 3:
-                    System.out.println(RED + "\t\t\t\t\t\t\t" + "Exiting to main menu..." + RESET);
-                    return; // Exit the method and return to the main menu
+                    // Exit the program
+                    System.out.println("Exiting the program. Thank you!");
+                    return;
+
                 default:
-                    System.out.println(RED + "\t\t\t\t\t\t\t" + "Invalid option. Please select 1, 2, or 3." + RESET);
+                    // Handle invalid input
+                    System.out.println("Invalid choice! Please select a valid option.");
             }
         }
     }
 }
 
-// Welcome class to display welcome message and options
-class Welcome extends Source {
+
+class Welcome {
+
+    // ANSI escape codes for colors
+    public static final String RESET = "\u001B[0m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String MAGENTA = "\u001B[35m";
+    public static final String Blue = "\u001B[34m";
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        while (true) {
-            // Display welcome message
-            System.out.println(YELLOW
-                    + "                    --------------------------------------------------------------------------------------------------------------------- ");
-            System.out.println(
-                    "             	   |                                                                                                                 	|");
-            System.out.println(
-                    "             	   |                                   		   Welcome to Travel Agency                                    	|");
-            System.out.println(
-                    "                   ---------------------------------------------------------------------------------------------------------------------- ");
-            System.out.println();
-            System.out.println("" + RESET);
+        // ............................................................................................................................................
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
 
-            System.out.println("Enter your choice:");
-            System.out.println("1. Credit and Source");
-            System.out.println("2. Exit");
+        // Welcome Screen - First part at the top
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
 
-            int choice = sc.nextInt();
-            sc.nextLine(); // Consume newline
+        System.out.println(CYAN
+                + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-= WELCOME TO SKYHIGH AIRLINES RESERVATION SYSTEM -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-= "
+                + RESET);
 
-            if (choice == 1) {
-                // Call Credit and Source options
-                cred();
-                source();
-            } else if (choice == 2) {
-                System.out.println(RED + "\t\t\t\t\t\t\t" + "Exiting the application. Goodbye!" + RESET);
-                break; // Exit the main loop
-            } else {
-                System.out.println(RED + "\t\t\t\t\t\t\t" + "Invalid option. Please select 1 or 2." + RESET);
-            }
-        }
+        // Airplane Art shifted slightly to the right
+        System.out.println("\n"); // Space before airplane art for proper alignment
+        System.out.println("\t\t\t\t\t\t\t\t" + YELLOW + "          __|__");
+        System.out.println("\t\t\t\t\t\t\t\t" + "  _______/     \\_______");
+        System.out.println("\t\t\t\t\t\t\t\t" + CYAN + " /    o o o o o o o    \\" + RESET);
+        System.out.println("\t\t\t\t\t\t\t" + "        /-----------------------\\");
+        System.out.println("\t\t\t\t\t\t\t" + "        |    " + YELLOW + "SKYHIGH AIRLINES " + RESET + "  |");
+        System.out.println("\t\t\t\t\t\t\t\t" + "\\_______________________/");
+        System.out.println("\t\t\t\t\t\t\t\t" + Blue + "     |    |    |    |" + RESET);
+        System.out.println("\t\t\t\t\t\t\t\t" + Blue + "     |    |    |    |" + RESET);
+        System.out.println("\t\t\t\t\t\t\t\t" + Blue + "     |    |    |    |" + RESET);
+        System.out.println("\t\t\t\t\t\t\t\t" + "    /     |    |     \\" + MAGENTA);
+        System.out.println("\t\t\t\t\t\t\t\t" + "   /      |    |      \\");
+        System.out.println("\t\t\t\t\t\t\t\t" + "  /_______|____|_______\\" + RESET);
+        System.out.println();
+        System.out.println();
+
+        System.out.println(CYAN
+                + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-= "
+                + RESET);
+
+        Credit.cred();
+	
+	Source.source();
+
+        /*
+         // ....................................................
+         // Reservation options menu in yellow
+        
+         
+         * System.out.println("\n");
+         * System.out.println(YELLOW +
+         * "                    --------------------------------------------------------------------------------------------------------------------- "
+         * );
+         * System.out.
+         * println("             	   |                                                                                                                 	|"
+         * );
+         * System.out.
+         * println("             	   |                                   		   [1] List All Flights                                            	|"
+         * );
+         * System.out.
+         * println("             	   |                                  		   [2] Search For A Flight                      		     	|"
+         * );
+         * System.out.
+         * println("             	   |                                   		   [3] Book A Ticket                            		     	|"
+         * );
+         * System.out.
+         * println("                   |                                  		   [4] Print A Ticket                           		     	|"
+         * );
+         * System.out.
+         * println("             	   |                                		   [5] Cancel A Ticket                          		     	|"
+         * );
+         * System.out.
+         * println("              	   |                                                                                   			             	|"
+         * );
+         * System.out.
+         * println("                   ---------------------------------------------------------------------------------------------------------------------- "
+         * );
+         * System.out.println("");
+         * System.out.println("" + RESET);
+         */
     }
 }
+
