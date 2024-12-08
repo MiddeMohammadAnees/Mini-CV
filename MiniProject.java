@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 // Class to store credentials
 
@@ -49,10 +49,11 @@ class Credit {
     public static final String CYAN = "\u001B[36m";
     public static final String YELLOW = "\u001B[33m";
     public static final String MAGENTA = "\u001B[35m";
-    public static final String Blue = "\u001B[34m";
+    public static final String BLUE = "\u001B[34m";
     public static final String RED = "\u001B[91m";
     public static final String BRIGHTCYAN = "\u001B[96m";
     public static final String BRIGHTMAGENTA = "\u001B[95m";
+    public static final String BRIGHTYELLOW = "\u001B[93m";
 
     public static void cred() {
 
@@ -170,16 +171,17 @@ class Credit {
                 System.out.println(RED + "\t\t\t\t\t\t\t" + "Invalid option. Please select 1, 2, or 3." + RESET);
             }
         }
-	
 
     }
 }
+
 // Class Source - Destination
 class Source extends Credit {
 
     public static void source() {
+        Date date = new Date();
+
         while (true) {
-            // Display options
             System.out.println("\n");
             System.out.println(YELLOW
                     + "                    --------------------------------------------------------------------------------------------------------------------- ");
@@ -204,13 +206,15 @@ class Source extends Credit {
 
             switch (choice) {
                 case 1:
+                    System.out.println(CYAN + "\t\t                  ............................Today's Date: December 08, 2024............................" + RESET);
+                    System.out.println("\n");
                     // Display available flights
-                    System.out.println(BRIGHTCYAN + "\t\t\t\t   ..............................Flights that are Available are.............................." + RESET);
+                    System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t               Flights that are Available are       " + RESET);
                     System.out.println();
 
                     System.out.println(YELLOW + "                    --------------------------------------------------------------------------------------------------------------------");
                     System.out.println("             	   |                                                                                                                 	|");
-                    System.out.println("            	   |     " + Blue + "\t\t  S.No.\t Flight No.\tFrom \t  To   \t Arrival Time \t  Departure Time    " + RESET + YELLOW + " 	                |");
+                    System.out.println("            	   |     " + BLUE + "\t\t  S.No.\t Flight No.\tFrom \t  To   \t Arrival Time \t  Departure Time    " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |                                                                                                                 	|");
                     System.out.println("            	   |     " + GREEN + " \t\t  1\t   AI101      New York \t London     06:30AM    \t     02:00AM       " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |                                                                                                                 	|");
@@ -224,43 +228,45 @@ class Source extends Credit {
                     System.out.println("");
                     System.out.println("" + RESET);
                     System.out.println();
-                    // Continue to the next step
                     break;
 
                 case 2:
                     // Search for a flight
                     while (true) {
-                System.out.print(MAGENTA + "\t\t\t\t\t\t\t\t" + "   Enter Source " + "\n" + RESET);
+                        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t" + "   Enter Source " + "\n" + RESET);
                         String src = sc.nextLine();
-                System.out.print(MAGENTA + "\t\t\t\t\t\t\t\t" + "   Enter Destination " + "\n" + RESET);
+                        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t" + "   Enter Destination " + "\n" + RESET);
                         String dst = sc.nextLine();
 
                         if (src.equalsIgnoreCase("New York") && dst.equalsIgnoreCase("London")) {
-                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is AI101.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Ticket is AI101.............................." + RESET);
                             break;
                         } else if (src.equalsIgnoreCase("Dubai") && dst.equalsIgnoreCase("Mumbai")) {
-                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is EK202.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Ticket is EK202.............................." + RESET);
                             break;
                         } else if (src.equalsIgnoreCase("Singapore") && dst.equalsIgnoreCase("Sydney")) {
-                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is SQ404.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Ticket is SQ404.............................." + RESET);
                             break;
                         } else if (src.equalsIgnoreCase("London") && dst.equalsIgnoreCase("Paris")) {
-                    System.out.println(RED + "\t\t\t\t   ..............................Your Flight Ticket is BA303.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Ticket is BA303.............................." + RESET);
                             break;
                         } else {
-                            System.out.println("Enter the flights which are present on board");
+                            System.out.println(RED+ "\t\t\t\t\t             Enter the flights which are present on board                      " + RESET);
+                            source();
+                            System.out.println("\n");
                         }
                     }
                     break;
 
                 case 3:
                     // Exit the program
-                    System.out.println("Exiting the program. Thank you!");
+                    System.out.println(RED + "Returning to the main menu..." + RESET);
+                    cred(); // Call the `cred` method from `Credit` class
                     return;
 
                 default:
                     // Handle invalid input
-                    System.out.println("Invalid choice! Please select a valid option.");
+                    System.out.println(RED+ "\t\t\t\t\t\t             Invalid choice! Please select a valid option.");
             }
         }
     }
@@ -315,14 +321,14 @@ class Welcome {
                 + RESET);
 
         Credit.cred();
-	
-	Source.source();
+
+        Source.source();
 
         /*
-         // ....................................................
-         // Reservation options menu in yellow
-        
-         
+         * // ....................................................
+         * // Reservation options menu in yellow
+         * 
+         * 
          * System.out.println("\n");
          * System.out.println(YELLOW +
          * "                    --------------------------------------------------------------------------------------------------------------------- "
@@ -356,4 +362,3 @@ class Welcome {
          */
     }
 }
-
