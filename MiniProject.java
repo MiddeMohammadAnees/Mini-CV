@@ -242,23 +242,23 @@ class Source extends Credit {
                         String dst = sc.nextLine();
 
                         if (src.equalsIgnoreCase("New York") && dst.equalsIgnoreCase("London")) {
-                            System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Ticket is AI101.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Number is AI101.............................." + RESET);
 			    	
 		            Choose.choose();
                             break;
                         } else if (src.equalsIgnoreCase("Dubai") && dst.equalsIgnoreCase("Mumbai")) {
-                            System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Ticket is EK202.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Number is EK202.............................." + RESET);
                             			    	
 		            Choose.choose();
 			    break;
  
                         } else if (src.equalsIgnoreCase("Singapore") && dst.equalsIgnoreCase("Sydney")) {
-                            System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Ticket is SQ404.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Number is SQ404.............................." + RESET);
 			    	
 		            Choose.choose();                            
                             break;
                         } else if (src.equalsIgnoreCase("London") && dst.equalsIgnoreCase("Paris")) {
-                            System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Ticket is BA303.............................." + RESET);
+                            System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Number is BA303.............................." + RESET);
 			    	
 		            Choose.choose();
                            
@@ -292,15 +292,83 @@ class Source extends Credit {
 // Economy class extending Source
 
 class EconomyClass extends Source {
+    // ANSI escape codes for colors
+    private static final String YELLOW = "\033[33m";
+    private static final String BRIGHTYELLOW = "\033[93m";
+    private static final String BRIGHTCYAN = "\033[96m";
+    private static final String RESET = "\033[0m";
+
+    // Actual seat costs
+    private static final int COST_A1 = 20;   // A1: Window seat
+    private static final int COST_A2 = 15;   // A2: Middle seat
+    private static final int COST_A3 = 12;   // A3: Middle seat
+    private static final int COST_A4 = 20;   // A4: Window seat
+
+public static void displayEconomyFeatures() {
+    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTYELLOW + "\t         Seat Number\t    \t    \t    Type \t\t\t AV/NA   \t\t      Cost " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                  	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
     
-    static double cost=1000.87;
+    // Series B
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                  	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    
+    // Series C
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                  	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
+    System.out.println("             	   |                                                                                                                 	      |");
+    
+    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 
-    public static void displayEconomyFeatures() {
-        System.out.println("Economy Class Features: Standard seating, in-flight entertainment.");
-        System.out.println("Cost: ₹" + cost);
-    }
+	while(true){
+		System.out.println("Enter the Seat Number");
+		String seat = sc.next();
+		
+		if(seat.equals("A1") ||seat.equals("A1") ||seat.equals("A4") ||seat.equals("B1") ||seat.equals("B4") ||seat.equals("C1") ||seat.equals("C4") ){
+				System.out.println("Hence...");
+				break;
+		}
 
+		else if(seat.equals("A2") ||seat.equals("B2") ||seat.equals("C2") ){
+                		System.out.println(RED + "\t\t\t\t\t\t\t\t" + "Sorry! Entered Seat is Not Available " + RESET);
+				System.out.println();
+                		System.out.println(GREEN + "\t\t\t\t\t\t\t\t" + " Choose the seat which is Available " + RESET);
+
+				break;
+		}
+
+		else if(seat.equals("A3") ||seat.equals("B3") ||seat.equals("C3") ){
+			System.out.println("Hence111111111...");
+				break;
+		}
+		else{
+                System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "   Enter Valid Choice!" + RESET);
+		}
+	}
+  }
 }
+
+
 
 
 // Premium class extending Source
@@ -367,7 +435,7 @@ class Choose{
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 
 		 System.out.println("             	   |                                                                                                                          |");
-		System.out.println("            	   |   " + BRIGHTCYAN + "\t\t1.Economy Class \t              2. Premium Economy Class       \t\t3. Business Class     " + RESET + YELLOW +"        |");
+		System.out.println("            	   |   " + BRIGHTCYAN + "\t1.Economy Class \t           2. Premium Economy Class    \t\t3. Business Class         \t4.Exit" + RESET + YELLOW +"        |");
 		 System.out.println("             	   |                                                                                                                          |");
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 
@@ -376,7 +444,6 @@ class Choose{
 		while(true){
 			System.out.println("Enter your Choice: ");
 			int n=sc.nextInt();
-			System.out.println("Enter your Choice: ");
 			if(n==1){
 				EconomyClass.displayEconomyFeatures();
 				break;
@@ -391,9 +458,13 @@ class Choose{
 				BusinessClass.displayBusinessFeatures();
 				break;
 			}
-			
+			else if(n==4){
+				Credit.cred();
+				break;
+			}
 			else{
-				System.out.println("Enter the Choice Correctly");
+                System.out.println(RED + "\t\t\t\t\t\t\t" + "   Enter Valid Choice!" + RESET);
+
 			}
 		}
 	} 
@@ -446,11 +517,13 @@ class Welcome {
                 + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-= "
                 + RESET);
 
-        Credit.cred();
+        //Credit.cred();
 
-        Source.source();
+        //Source.source();
 	
-	Choose.choose();
+	//Choose.choose();
+
+	EconomyClass.displayEconomyFeatures();
 
         /*
          * // ....................................................
