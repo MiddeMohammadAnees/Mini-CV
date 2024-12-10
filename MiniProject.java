@@ -166,6 +166,8 @@ class Credit {
             } else if (choice == 3) {
                 // Exit the application
                 System.out.println(RED + "\t\t\t\t\t\t\t" + "   Exiting the application. Goodbye!" + RESET);
+                System.exit(0); // Terminate the program
+
                 break;
             } else {
                 System.out.println(RED + "\t\t\t\t\t\t\t" + "Invalid option. Please select 1, 2, or 3." + RESET);
@@ -183,6 +185,7 @@ class Source extends Credit {
 
         while (true) {
             System.out.println("\n");
+
             System.out.println(YELLOW
                     + "                    --------------------------------------------------------------------------------------------------------------------- ");
             System.out.println(
@@ -206,7 +209,7 @@ class Source extends Credit {
 
             switch (choice) {
                 case 1:
-                    System.out.println(CYAN + "\t\t                  ............................Today's Date: December 08, 2024............................" + RESET);
+                    System.out.println(CYAN + "\t\t              ............................Current's Date & Time:"+date+"............................" + RESET);
                     System.out.println("\n");
                     // Display available flights
                     System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t               Flights that are Available are       " + RESET);
@@ -240,16 +243,27 @@ class Source extends Credit {
 
                         if (src.equalsIgnoreCase("New York") && dst.equalsIgnoreCase("London")) {
                             System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Ticket is AI101.............................." + RESET);
+			    	
+		            Choose.choose();
                             break;
                         } else if (src.equalsIgnoreCase("Dubai") && dst.equalsIgnoreCase("Mumbai")) {
                             System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Ticket is EK202.............................." + RESET);
-                            break;
+                            			    	
+		            Choose.choose();
+			    break;
+ 
                         } else if (src.equalsIgnoreCase("Singapore") && dst.equalsIgnoreCase("Sydney")) {
                             System.out.println(BRIGHTYELLOW+ "\t\t\t\t   ..............................Your Flight Ticket is SQ404.............................." + RESET);
+			    	
+		            Choose.choose();                            
                             break;
                         } else if (src.equalsIgnoreCase("London") && dst.equalsIgnoreCase("Paris")) {
                             System.out.println(BRIGHTYELLOW + "\t\t\t\t   ..............................Your Flight Ticket is BA303.............................." + RESET);
-                            break;
+			    	
+		            Choose.choose();
+                           
+ 			    break;
+
                         } else {
                             System.out.println(RED+ "\t\t\t\t\t             Enter the flights which are present on board                      " + RESET);
                             source();
@@ -262,16 +276,128 @@ class Source extends Credit {
                     // Exit the program
                     System.out.println(RED + "Returning to the main menu..." + RESET);
                     cred(); // Call the `cred` method from `Credit` class
-                    return;
+                    System.exit(0); // Terminate the program
+		    break;
 
                 default:
                     // Handle invalid input
                     System.out.println(RED+ "\t\t\t\t\t\t             Invalid choice! Please select a valid option.");
             }
         }
+
     }
 }
 
+
+// Economy class extending Source
+
+class EconomyClass extends Source {
+    
+    static double cost=1000.87;
+
+    public static void displayEconomyFeatures() {
+        System.out.println("Economy Class Features: Standard seating, in-flight entertainment.");
+        System.out.println("Cost: ₹" + cost);
+    }
+
+}
+
+
+// Premium class extending Source
+
+class PremiumClass extends Source {
+
+    static double cost = 2000.87;
+
+    public static void displayPremiumFeatures() {
+        System.out.println("Premium Class Features: Extra legroom, priority boarding, exclusive meals.");
+        System.out.println("Cost: ₹" + cost);
+    }
+
+
+}
+
+
+// Business class extending Source
+
+class BusinessClass extends Source {
+
+    static double cost=3000.87;
+
+    public static void displayBusinessFeatures() {
+        System.out.println("Business Class Features: Spacious seating, premium meals, lounge access.");
+        System.out.println("Cost: ₹" + cost);
+    }
+
+}
+
+class Choose{
+    // ANSI escape codes for colors
+    public static final String RESET = "\u001B[0m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String MAGENTA = "\u001B[35m";
+    public static final String BLUE = "\u001B[34m";
+    public static final String RED = "\u001B[91m";
+    public static final String BRIGHTCYAN = "\u001B[96m";
+    public static final String BRIGHTMAGENTA = "\u001B[95m";
+    public static final String BRIGHTYELLOW = "\u001B[93m";
+	public static void choose(){
+		Scanner sc = new Scanner(System.in);
+
+                System.out.println(YELLOW + "                    --------------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.println("             	   |                                                                                                                 	      |");
+                    
+		System.out.println("            	   |   " + BLUE + "S.No.\t   Feature \t    Economy Class \t Premium Economy Class   \t Business Class   \t  Cost  " + RESET + YELLOW + "      |");
+                System.out.println("             	   |                                                                                                                          |");
+		System.out.println("            	   |     " + GREEN + "1\tSeating Comfort     Standard seats\t      Wider seats    \t\t recliners seats \t   Low" + RESET + YELLOW + "\t      |");
+                System.out.println("             	   |                                                                                                                 	      |\t");
+
+		System.out.println("            	   |     " + GREEN + "2\tMeal Options  \t    Basic meals\t\t    Upgraded meals        \t Gourmet meals\t\tMedium - High" + RESET + YELLOW + " |");
+
+                System.out.println("             	   |                                                                                                                          |");
+
+		System.out.println("            	   |     " + GREEN + "3\tAmenities \t      Basic\t\t\tUpgraded   \t\t    Opulent \t\t   Highest" + RESET + YELLOW + "    |");
+
+                System.out.println("             	   |                                                                                                                          |");
+                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+               System.out.println("");
+                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+
+		 System.out.println("             	   |                                                                                                                          |");
+		System.out.println("            	   |   " + BRIGHTCYAN + "\t\t1.Economy Class \t              2. Premium Economy Class       \t\t3. Business Class     " + RESET + YELLOW +"        |");
+		 System.out.println("             	   |                                                                                                                          |");
+                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+
+		System.out.println();
+
+		while(true){
+			System.out.println("Enter your Choice: ");
+			int n=sc.nextInt();
+			System.out.println("Enter your Choice: ");
+			if(n==1){
+				EconomyClass.displayEconomyFeatures();
+				break;
+			}
+			
+			else if(n==2){
+				 PremiumClass.displayPremiumFeatures();
+				 break;
+			}
+			
+			else if(n==3){
+				BusinessClass.displayBusinessFeatures();
+				break;
+			}
+			
+			else{
+				System.out.println("Enter the Choice Correctly");
+			}
+		}
+	} 
+}
 
 class Welcome {
 
@@ -323,6 +449,8 @@ class Welcome {
         Credit.cred();
 
         Source.source();
+	
+	Choose.choose();
 
         /*
          * // ....................................................
