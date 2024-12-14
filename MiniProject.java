@@ -481,8 +481,6 @@ public static void displayPremiumFeatures() {
 
 
 
-
-
 // Business class extending Source
 
 class BusinessClass extends Source {
@@ -613,7 +611,7 @@ class Choose{
 		System.out.println();
 		
 //.............................................
-	Food food = new Food();
+	Upgrade food = new Food();
 //.............................................
 
 
@@ -679,7 +677,7 @@ rev:while(true){
 	int choice=sc.nextInt();
 
 	if(choice==1){
-		
+while(true){
         // Adding food and snacks options
         System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Choose Food/Snack Option" + RESET);
 
@@ -690,7 +688,7 @@ rev:while(true){
 	System.out.println("             	   |                                                                                                                          |");
 	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t1.Sandwich \t               1   \t\t  $5 " + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Chips \t               1   \t\t   $2 " + RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Chips \t               1   \t\t  $2 " + RESET + YELLOW +"                \t\t       |");
 	System.out.println("             	   |                                                                                                                          |");
 	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Soft Drink \t               1   \t\t  $3 " + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
@@ -701,7 +699,7 @@ rev:while(true){
 	System.out.println();
         System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 		 System.out.println("             	   |                                                                                                                          |"+RESET);
-		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"  \t\t\t\t\t\t\t|");
+		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t|");
 		 System.out.println("             	   |                                                                                                                          |");
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
 		System.out.println();
@@ -718,10 +716,10 @@ rev:while(true){
 	int qty=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for Entered Quantity is: "+"$"+(qty*5)+ RESET);
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println();
 
-        break rev;
+        break ;
 
             case 2:
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Chips"+ RESET);
@@ -730,11 +728,11 @@ rev:while(true){
 
 	int qty1=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty1+ RESET);
-	System.out.println();
-        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for Entered Quantity is: "+"$"+(qty1*2)+ RESET);
+	System.out.println(); 
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Chips Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println();
 
-        break rev;
+        break ;
 
             case 3:
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Soft-Drink"+ RESET);
@@ -743,10 +741,10 @@ rev:while(true){
 	int qty2=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for Entered Quantity is: "+"$"+(qty2*3)+ RESET);
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for"+qty2+" Soft-Drink Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println();
 
-        break rev;
+        break ;
 
             case 4:
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Water Bottle"+ RESET);
@@ -756,22 +754,26 @@ rev:while(true){
 	int qty3=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW+ "\t\t\t\t\t\t\t\t" + "The Price for Entered Quantity is: "+"$"+(qty3*1)+ RESET);
+        System.out.println(BRIGHTYELLOW+ "\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println();
 
-        break rev;
+        break;
 
             default:
-                System.out.println("Invalid choice.");
+                    System.out.println(RED + "Returning to the main menu..." + RESET);
+		break rev;
         }
+	
+	if(choice==5) break rev;
 
+	}
 
 	}
 	else if(choice ==2){
 		System.out.println("Continue....");
 		break rev;
 	}
-	else{
+	else {
                     System.out.println(RED + "Returning to the main menu..." + RESET);
 	}
 	break rev;	
