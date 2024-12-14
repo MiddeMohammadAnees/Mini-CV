@@ -284,6 +284,7 @@ class Source extends Credit {
                 default:
                     // Handle invalid input
                     System.out.println(RED+ "\t\t\t\t\t\t             Invalid choice! Please select a valid option.");
+			break;
             }
         }
 
@@ -587,16 +588,18 @@ class Choose{
 		
 		System.out.println("             	   |                                                                                                                 	      |");
                     
-		System.out.println("            	   |   " + BLUE + "S.No.\t   Feature \t    Economy Class \t Premium Economy Class   \t Business Class   \t  Cost  " + RESET + YELLOW + "      |");
+		System.out.println("            	   |   " + BLUE + "S.No.\t   Feature \t    Economy Class \t Premium Economy Class   \t Business Class   " + RESET + YELLOW + "\t\t      |");
                 System.out.println("             	   |                                                                                                                          |");
-		System.out.println("            	   |     " + GREEN + "1\tSeating Comfort     Standard seats\t      Wider seats    \t\t recliners seats \t   Low" + RESET + YELLOW + "\t      |");
+		System.out.println("            	   |     " + GREEN + "1\tSeating Comfort     Standard seats\t      Wider seats    \t\t recliners seats " + RESET + YELLOW + "\t\t      |");
                 System.out.println("             	   |                                                                                                                 	      |\t");
 
-		System.out.println("            	   |     " + GREEN + "2\tMeal Options  \t    Basic meals\t\t    Upgraded meals        \t Gourmet meals\t\tMedium - High" + RESET + YELLOW + " |");
+		System.out.println("            	   |     " + GREEN + "2\tMeal Options  \t    Basic meals\t\t    Upgraded meals        \t Gourmet meals\t" + RESET + YELLOW + "\t\t      |");
 
                 System.out.println("             	   |                                                                                                                          |");
 
-		System.out.println("            	   |     " + GREEN + "3\tAmenities \t      Basic\t\t\tUpgraded   \t\t    Opulent \t\t   Highest" + RESET + YELLOW + "    |");
+		System.out.println("            	   |     " + GREEN + "3\tAmenities \t      Basic\t\t\tUpgraded   \t\t    Opulent \t" + RESET + YELLOW + "\t\t      |");
+                System.out.println("             	   |                                                                                                                          |");
+		System.out.println("            	   |     " + GREEN + "4\tCost  \t\t     Low\t      \t     Medium - High    \t\t    Highest \t   " + RESET + YELLOW + "\t\t      |");
 
                 System.out.println("             	   |                                                                                                                          |");
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
@@ -763,20 +766,23 @@ while(true){
                     System.out.println(RED + "Returning to the main menu..." + RESET);
 		break rev;
         }
+
+
+	}
+
+	}
 	
 	if(choice==5) break rev;
 
-	}
-
-	}
 	else if(choice ==2){
 		System.out.println("Continue....");
 		break rev;
 	}
 	else {
                     System.out.println(RED + "Returning to the main menu..." + RESET);
+			break rev;
 	}
-	break rev;	
+	
 	}
         // Seat selection
 
@@ -831,9 +837,9 @@ class Welcome {
                 + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-= "
                 + RESET);
 
-          Credit.cred();
+        Credit.cred();
 
-          Source.source();
+        Source.source();
 	
 	Choose.choose();
 
