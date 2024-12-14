@@ -156,6 +156,8 @@ class Credit {
                     long inputPhone = scanner.nextLong();
                     System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "      Enter OTP " + "\n" + RESET);
                     int otp = scanner.nextInt();
+                    System.out.print(RED + "\t\t\t\t\t\t\t\t" + "    Do not Share.... " + "\n" + RESET);
+		    System.out.println();
                     if (crendital.validate(inputUsername, inputPassword, inputPhone,otp)) {
                         System.out.println(BRIGHTCYAN+ "\t\t\t    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Login successful! Welcome..<<<<<<<<<<<<<<<<<<<<<<<<<<<"+ "" + RESET);
 			System.out.println();
@@ -614,7 +616,11 @@ class Choose{
 		System.out.println();
 		
 //.............................................
-	Upgrade food = new Food();
+	Upgrade food = new EcoFood();
+
+	Upgrade Pfood = new PreFood();
+
+	Upgrade Bfood = new BussFood();
 //.............................................
 
 
@@ -629,11 +635,13 @@ class Choose{
 			
 			else if(n==2){
 				 PremiumClass.displayPremiumFeatures();
+				 Pfood.displayFeatures();
 				 break;
 			}
 			
 			else if(n==3){
 				BusinessClass.displayBusinessFeatures();
+				 Bfood.displayFeatures();
 				break;
 			}
 			else if(n==4){
@@ -651,12 +659,6 @@ class Choose{
 
 
 abstract class Upgrade{
-
-    public abstract void displayFeatures();
-}
-
-
-class Food extends Upgrade {
     // ANSI escape codes for colors
     public static final String RESET = "\u001B[0m";
     public static final String GREEN = "\u001B[32m";
@@ -668,6 +670,12 @@ class Food extends Upgrade {
     public static final String BRIGHTCYAN = "\u001B[96m";
     public static final String BRIGHTMAGENTA = "\u001B[95m";
     public static final String BRIGHTYELLOW = "\u001B[93m";
+
+    public abstract void displayFeatures();
+}
+
+
+class EcoFood extends Upgrade {
 
     @Override
     public void displayFeatures() {
@@ -691,7 +699,7 @@ while(true){
 	System.out.println("             	   |                                                                                                                          |");
 	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t1.Sandwich \t               1   \t\t  $5 " + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Chips \t               1   \t\t  $2 " + RESET + YELLOW +"                \t\t       |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Chips \t               1   \t\t  $2 " + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
 	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Soft Drink \t               1   \t\t  $3 " + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
@@ -702,7 +710,7 @@ while(true){
 	System.out.println();
         System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 		 System.out.println("             	   |                                                                                                                          |"+RESET);
-		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t|");
+		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t      |");
 		 System.out.println("             	   |                                                                                                                          |");
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
 		System.out.println();
@@ -755,7 +763,7 @@ while(true){
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
 
 	int qty3=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity ais: "+qty3+ RESET);
 	System.out.println();
         System.out.println(BRIGHTYELLOW+ "\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println();
@@ -789,6 +797,256 @@ while(true){
     }
 }
 
+
+class PreFood extends Upgrade {
+
+    @Override
+    public void displayFeatures() {
+	Scanner sc = new Scanner(System.in);
+         System.out.println(RED + "\t\t\t\t\t\t\t" + " 1.Flex Plus               2. Saver              3.Exit" + RESET);
+	System.out.println();
+
+
+
+rev:while(true){
+	System.out.println("Enter your choice:");
+	int choice=sc.nextInt();
+
+	if(choice==1){
+while(true){
+        // Adding food and snacks options
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Choose Food/Snack Option" + RESET);
+
+	System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTYELLOW + "\tFood/Snack \t           Quantity   \t\t Price " + RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |                             " + BRIGHTCYAN + "\t1.Gourmet Sandwich \t      1   \t\t  $10 "+RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Fruit Platter \t      1   \t\t  $7" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Premium Soft Drink  \t      1   \t\t  $4" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle                1   \t\t  $2" + RESET + YELLOW +"                \t\t      |");
+
+        System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+
+	System.out.println();
+        System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+		 System.out.println("             	   |                                                                                                                          |"+RESET);
+		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t      |");
+		 System.out.println("             	   |                                                                                                                          |");
+                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+		System.out.println();
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Select Food/Snack Option" + RESET);
+
+        int foodChoice = sc.nextInt();
+	
+        switch (foodChoice) {
+            case 1:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Gourmet Sandwich "+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+
+	int qty=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*10)+ RESET);
+	System.out.println();
+
+        break ;
+
+            case 2:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Fruit Platter"+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+
+	int qty1=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty1+ RESET);
+	System.out.println(); 
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Fruit Platter Quantity is: "+"$"+(qty1*7)+ RESET);
+	System.out.println();
+
+        break ;
+
+            case 3:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Premium Soft Drink"+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+	int qty2=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for"+qty2+" Premium Soft Drink Quantity is: "+"$"+(qty2*4)+ RESET);
+	System.out.println();
+
+        break ;
+
+            case 4:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Water Bottle"+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+
+	int qty3=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTYELLOW+ "\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*2)+ RESET);
+	System.out.println();
+
+        break;
+
+            default:
+                    System.out.println(RED + "Returning to the main menu..." + RESET);
+		break rev;
+        }
+
+
+	}
+
+	}
+	
+	if(choice==5) break rev;
+
+	else if(choice ==2){
+		System.out.println("Continue....");
+		break rev;
+	}
+	else {
+                    System.out.println(RED + "Returning to the main menu..." + RESET);
+			break rev;
+	}
+	
+	}
+        // Seat selection
+
+    }
+}
+
+
+
+class BussFood extends Upgrade {
+
+    @Override
+    public void displayFeatures() {
+	Scanner sc = new Scanner(System.in);
+         System.out.println(RED + "\t\t\t\t\t\t\t" + " 1.Flex Plus               2. Saver              3.Exit" + RESET);
+	System.out.println();
+
+
+
+rev:while(true){
+	System.out.println("Enter your choice:");
+	int choice=sc.nextInt();
+
+	if(choice==1){
+while(true){
+        // Adding food and snacks options
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Choose Food/Snack Option" + RESET);
+
+	System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTYELLOW + "\tFood/Snack \t           Quantity   \t\t Price " + RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |                             " + BRIGHTCYAN + "\t1.Gourmet Sandwich \t      1   \t\t  $15 "+RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Pasta \t\t      1   \t\t  $12" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Salad  \t \t      1   \t\t  $6" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                          |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle                1   \t\t  $3" + RESET + YELLOW +"                \t\t      |");
+
+        System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+
+	System.out.println();
+        System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+		 System.out.println("             	   |                                                                                                                          |"+RESET);
+		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t      |");
+		 System.out.println("             	   |                                                                                                                          |");
+                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+		System.out.println();
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Select Food/Snack Option" + RESET);
+
+        int foodChoice = sc.nextInt();
+	
+        switch (foodChoice) {
+            case 1:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Gourmet Sandwich"+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+
+	int qty=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*15)+ RESET);
+	System.out.println();
+
+        break ;
+
+            case 2:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Pasta"+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+
+	int qty1=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty1+ RESET);
+	System.out.println(); 
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Pasta Quantity is: "+"$"+(qty1*12)+ RESET);
+	System.out.println();
+
+        break ;
+
+            case 3:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Salad"+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+	int qty2=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t" + "The Price for"+qty2+" Salad Quantity is: "+"$"+(qty2*6)+ RESET);
+	System.out.println();
+
+        break ;
+
+            case 4:
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Water Bottle"+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+
+	int qty3=sc.nextInt();
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
+	System.out.println();
+        System.out.println(BRIGHTYELLOW+ "\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*3)+ RESET);
+	System.out.println();
+
+        break;
+
+            default:
+                    System.out.println(RED + "Returning to the main menu..." + RESET);
+		break rev;
+        }
+
+
+	}
+
+	}
+	
+	if(choice==5) break rev;
+
+	else if(choice ==2){
+		System.out.println("Continue....");
+		break rev;
+	}
+	else {
+                    System.out.println(RED + "Returning to the main menu..." + RESET);
+			break rev;
+	}
+	
+	}
+        // Seat selection
+
+    }
+}
 
 class Welcome {
 
