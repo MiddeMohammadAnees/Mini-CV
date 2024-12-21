@@ -10,6 +10,13 @@ class Crenditals {
 
     // Constructor
 
+    Crenditals(String Name, String Password, long Phone) {
+		this.Name=Name;
+		this.Password=Password;
+		this.Phone= Phone;
+	}
+
+
     // Setter method to update all fields
 
     void setAll(String Name, String Password, long Phone) {
@@ -69,9 +76,9 @@ class Credit {
         Scanner scanner = new Scanner(System.in);
 
         // Create a User object
-        Crenditals crendital = new Crenditals();
+        Crenditals crendital = new Crenditals("Anees","7777",7075186108l);
 
-        while (true) {
+        rev:while (true) {
             // Display options
 
             System.out.println("\n");
@@ -138,8 +145,7 @@ class Credit {
                         + RESET);
 
                 System.out.println(YELLOW + "             	   |                          		   " + RED + ""
-                        + "    	  The User Phone Number is: " + crendital.getPhone() + "     " + RESET + YELLOW
-                        + "\t\t\t\t\t" + "|" + RESET);
+                        + "    	  The User Phone Number is: " + crendital.getPhone() + "     " + RESET + YELLOW+ "\t\t\t\t" + "        |" + RESET);
                 System.out.println(YELLOW
                         + "             	   |                                                                                                                 	|"
                         + RESET);
@@ -153,7 +159,21 @@ class Credit {
             } else if (choice == 2) {
 
                 // Sign In
-                if (crendital.getName() == null) {
+		    System.out.println(GREEN + "\t\t\t\t\t\t\t" + "     Enter the Details to Sign In:" + "\n" + RESET);
+                    System.out.print(GREEN + "\t\t\t\t\t\t\t\t" + "   Enter Username " + "\n" + RESET);
+                    String inputUsername1 = scanner.nextLine();
+                    System.out.print(GREEN + "\t\t\t\t\t\t\t\t" + "   Enter Password " + "\n" + RESET);
+                    String inputPassword1 = scanner.nextLine();
+                    System.out.print(GREEN + "\t\t\t\t\t\t\t\t" + "   Enter Phone Number " + "\n" + RESET);
+                    long inputPhone1 = scanner.nextLong();
+
+
+		if(crendital.getName().equals(inputUsername1) && crendital.getPassword().equals(inputPassword1) &&  crendital.getPhone() == inputPhone1){
+                        System.out.println(BRIGHTCYAN+ "\t\t\t        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..Login successful! Welcome..<<<<<<<<<<<<<<<<<<<<<<<<<<<"+ "" + RESET);
+                        break rev; // Exit loop on successful login
+		}
+	
+	 	  else if (crendital.getName() == null ||crendital.getPassword() == null || crendital.getName().equalsIgnoreCase("Anees")|| crendital.getPassword().equalsIgnoreCase("7777")|| crendital.getPhone()==7075186108l ) {
                     System.out.println(MAGENTA + "\t\t\t\t\t\t\t" + "No account found. Please SignUp first.");
                 } else {
                     System.out.println(GREEN + "\t\t\t\t\t\t\t" + "     Enter the Details to Sign Up:" + "\n" + RESET);
@@ -743,15 +763,22 @@ while(true){
 	int qty=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty+" Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
 		if(n1==1){
 		User.Pri_Det();
 		break rev;
 		}
+		else if(n1==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
+		break rev;
+		}
 		else
+		
         break ;
 
             case 2:
@@ -762,30 +789,42 @@ while(true){
 	int qty1=sc.nextInt();
         System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty1+ RESET);
 	System.out.println(); 
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty1+" Chips Quantity is: "+"$"+(qty1*2)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Chips Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n2=sc.nextInt();
 		if(n2==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n2==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
         break ;
 
             case 3:
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Soft-Drink"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Soft Drink"+ RESET);
 	System.out.println();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
 	int qty2=sc.nextInt();
         System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  "   + "The Price for "+qty2+" Soft-Drink Quantity is: "+"$"+(qty2*3)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"   + "The Price for "+qty2+" Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n3=sc.nextInt();
 		if(n3==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n3==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
@@ -799,14 +838,20 @@ while(true){
 	int qty3=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity ais: "+qty3+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n4=sc.nextInt();
 		if(n4==1){
 		User.Pri_Det();
 		break rev;
-	}
+		}
+		else if(n4==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
+		break rev;
+		}
 		else
         break ;
             default:
@@ -861,13 +906,13 @@ while(true){
 	System.out.println("             	   |                                                                                                                          |");
 	System.out.println("                   |\t\t            	      " + BRIGHTYELLOW + "\tFood/Snack \t           Quantity   \t\t Price " + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |                             " + BRIGHTCYAN + "\t1.Gourmet Sandwich \t      1   \t\t  $10 "+RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |                             " + BRIGHTCYAN + "\t1.Gourmet Sandwich \t      1   \t\t  $5 "+RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Fruit Platter \t      1   \t\t  $7" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Fruit Platter \t      1   \t\t  $2" + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Premium Soft Drink  \t      1   \t\t  $4" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Premium Soft Drink  \t      1   \t\t  $3" + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle                1   \t\t  $2" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle                1   \t\t  $1" + RESET + YELLOW +"                \t\t      |");
 
         System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
 
@@ -878,7 +923,7 @@ while(true){
 		 System.out.println("             	   |                                                                                                                          |");
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
 		System.out.println();
-        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t"  + "Select Food/Snack Option" + RESET);
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t"  + "Select Food/Snack Option" + RESET);
 
         int foodChoice = sc.nextInt();
 	
@@ -891,12 +936,18 @@ while(true){
 	int qty=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t"  + "Entered Quantity is: "+qty+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*10)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
 		if(n1==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n1==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
@@ -910,12 +961,18 @@ while(true){
 	int qty1=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t"  + "Entered Quantity is: "+qty1+ RESET);
 	System.out.println(); 
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty1+" Fruit Platter Quantity is: "+"$"+(qty1*7)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Fruit Platter Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n2=sc.nextInt();
 		if(n2==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n2==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
@@ -928,12 +985,18 @@ while(true){
 	int qty2=sc.nextInt();
         System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  "  + "The Price for "+qty2+" Premium Soft Drink Quantity is: "+"$"+(qty2*4)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"  + "The Price for "+qty2+" Premium Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n3=sc.nextInt();
 		if(n3==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n3==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
@@ -947,12 +1010,19 @@ while(true){
 	int qty3=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*2)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+
 		int n4=sc.nextInt();
 		if(n4==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n4==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
@@ -1010,13 +1080,13 @@ while(true){
 	System.out.println("             	   |                                                                                                                          |");
 	System.out.println("                   |\t\t            	      " + BRIGHTYELLOW + "\tFood/Snack \t           Quantity   \t\t Price " + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |                             " + BRIGHTCYAN + "\t1.Gourmet Sandwich \t      1   \t\t  $15 "+RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |                             " + BRIGHTCYAN + "\t1.Gourmet Sandwich \t      1   \t\t  $5 "+RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Pasta \t\t      1   \t\t  $12" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Pasta \t\t      1   \t\t  $2" + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Salad  \t \t      1   \t\t  $6" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Salad  \t \t      1   \t\t  $3" + RESET + YELLOW +"                \t\t      |");
 	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle                1   \t\t  $3" + RESET + YELLOW +"                \t\t      |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle                1   \t\t  $1" + RESET + YELLOW +"                \t\t      |");
 
         System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
 
@@ -1027,7 +1097,7 @@ while(true){
 		 System.out.println("             	   |                                                                                                                          |");
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
 		System.out.println();
-        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t" + "Select Food/Snack Option" + RESET);
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Select Food/Snack Option" + RESET);
 
         int foodChoice = sc.nextInt();
 	
@@ -1040,13 +1110,20 @@ while(true){
 	int qty=sc.nextInt();
         System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*15)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
 		if(n1==1){
 		User.Pri_Det();
 		break rev;
+		}
+		else if(n1==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
+		break rev;
+		
 		}
 		else
         break ;
@@ -1058,12 +1135,19 @@ while(true){
 	int qty1=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty1+ RESET);
 	System.out.println(); 
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty1+" Pasta Quantity is: "+"$"+(qty1*12)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Pasta Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+
 		int n2=sc.nextInt();
 		if(n2==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n2==3){
+		BillGenerator.billgenerator();
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
@@ -1076,13 +1160,21 @@ while(true){
 	int qty2=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  "  + "The Price for "+qty2+" Salad Quantity is: "+"$"+(qty2*6)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"  + "The Price for "+qty2+" Salad Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+
 
 		int n3=sc.nextInt();
 		if(n3==1){
 		User.Pri_Det();
+		break rev;
+		}
+		else if(n3==3){
+		BillGenerator.billgenerator();
+
+		User.Pri_Det();
+
 		break rev;
 		}
 		else
@@ -1096,14 +1188,22 @@ while(true){
 	int qty3=sc.nextInt();
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*3)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t     1.Continue	       2.Another Snack"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+
 		int n4=sc.nextInt();
 		if(n4==1){
 		User.Pri_Det();
 		break rev;
-	}
+		}
+		else if(n4==3){
+		BillGenerator.billgenerator();
+
+		User.Pri_Det();
+
+		break rev;
+		}
 		else
         	break ;
             default:
@@ -1134,6 +1234,90 @@ while(true){
 
     }
 }
+
+
+class BillGenerator {
+
+    // ANSI escape codes for colors
+    public static final String RESET = "\u001B[0m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String MAGENTA = "\u001B[35m";
+    public static final String BLUE = "\u001B[34m";
+    public static final String RED = "\u001B[91m";
+    public static final String BRIGHTCYAN = "\u001B[96m";
+    public static final String BRIGHTMAGENTA = "\u001B[95m";
+    public static final String BRIGHTYELLOW = "\u001B[93m";
+
+    public static void billgenerator() {
+        Scanner scanner = new Scanner(System.in);
+	System.out.println();
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "For Confirmation Please Fill Up the Details"+RESET);
+	System.out.println();
+
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t\t" + "Enter the Number of Items"+RESET);
+        int itemCount = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+
+        String[] itemNames = new String[itemCount];
+        double[] itemPrices = new double[itemCount];
+        int[] itemQuantities = new int[itemCount];
+
+        for (int i = 0; i < itemCount; i++) {
+            System.out.print(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t\t" +"Enter the Name of item " +"\n"+ (i + 1) + ": "+RESET);
+            itemNames[i] = scanner.nextLine();
+
+            // Assign price based on item name
+	rev:while(true){
+            if (itemNames[i].equalsIgnoreCase("Sandwich") || itemNames[i].equalsIgnoreCase("Gourmet Sandwich")) {
+                itemPrices[i] = 5.0;
+		break rev;
+            } else if (itemNames[i].equalsIgnoreCase("Chips") || itemNames[i].equalsIgnoreCase("Fruit Platter") || itemNames[i].equalsIgnoreCase("Pasta")) {
+                itemPrices[i] = 2.0;
+		break rev;
+            } else if (itemNames[i].equalsIgnoreCase("Soft Drink") || itemNames[i].equalsIgnoreCase("Premium Soft Drink") || itemNames[i].equalsIgnoreCase("Salad")) {
+                itemPrices[i] = 3.0;
+		break rev;
+            } else if (itemNames[i].equalsIgnoreCase("Water Bottle")) {
+                itemPrices[i] = 3.0;
+		break rev;
+            } else if (itemNames[i] == null || itemPrices[i] <= 0 || itemQuantities[i] <= 0) {
+    			System.out.println("Invalid data for item " + (i + 1));
+    			
+	    } else {
+                System.out.print(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t\t" +"Enter the Items Correctly" + ": "+RESET);
+            }
+		break rev;
+	}
+            System.out.print(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t      " +"Enter the quantity of "+ itemNames[i]  +"\n"+ ": "+RESET);
+            itemQuantities[i] = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+        }
+
+        // Display Bill Summary
+	System.out.println(BRIGHTMAGENTA+ "\t\t\t\t\t\t\t    ------------------Bill Summary------------------ " + RESET);
+	double totalAmount = 0;
+	System.out.println();
+	for (int i = 0; i < itemCount; i++) {
+    		double itemTotal = itemPrices[i] * itemQuantities[i];
+    		totalAmount += itemTotal;
+
+   	 System.out.printf(CYAN + "\t\t\t\t\t\t\t\t%-20s %d x %.2f = %.2f\n" + RESET, 
+                      itemNames[i], itemQuantities[i], itemPrices[i], itemTotal);
+	}
+	System.out.println();
+	System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t------------------------------------------------------" + RESET);
+	System.out.println();
+	System.out.printf(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t  Total Amount: $%.2f\n" + RESET, totalAmount);
+	System.out.println();
+	System.out.println(MAGENTA + "\t\t\t\t\t\t\t------------------------------------------------------" + RESET);
+	System.out.println();
+
+    }
+
+}
+
 
 //..............Primary Contact Details...........
 
@@ -1183,7 +1367,7 @@ abstract class Primary_Details {
     }
 
     boolean validateOtp(int generatedOtp) {
-        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t\tEnter the OTP: " + RESET);
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t        Enter the OTP: " + RESET);
         int enteredOtp = sc.nextInt();
         if (enteredOtp == generatedOtp) {
             System.out.println(CYAN + "\t\t\t\t\t\t\t\t\t    OTP Verified Successfully!" + RESET);
@@ -1208,53 +1392,57 @@ class User extends Primary_Details {
         boolean isPhoneVerified = false;
 
         while (true) {
-            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t 1. Email Verification\t\t2. Phone Number Verification" + RESET);
+            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t 1. Email Verification\t\t\t2. Phone Number Verification" + RESET);
             System.out.println();
 
             // Email Verification
             while (!isEmailVerified) {
-                System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t\tEnter the Email: " + RESET);
+                System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter the Email: " + RESET);
                 String email = sc.next();
                 if (obj.mail(email)) {
                     int emailOtp = obj.generateOtp();
                     if (obj.validateOtp(emailOtp)) {
                         isEmailVerified = true;
 			System.out.println();
-                        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t    Email Verified Successfully!" + RESET);
+                        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t   Email Verified Successfully!" + RESET);
                     }
                 } else {
 		    System.out.println();
-                    System.out.println(RED + "\t\t\t\t\t\t\t\tInvalid Email. Please try again." + RESET);
+                    System.out.println(RED + "\t\t\t\t\t\t\t\t\tInvalid Email. Please try again." + RESET);
+		    System.out.println();
                 }
             }
 
             // Phone Verification
             while (!isPhoneVerified) {
 		System.out.println();
-                System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t\tEnter the Phone Number: " + RESET);
+                System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter the Phone Number: " + RESET);
                 String phoneNumber = sc.next();
                 if (obj.isMobileNumberValid(phoneNumber)) {
                     int phoneOtp = obj.generateOtp();
                     if (obj.validateOtp(phoneOtp)) {
                         isPhoneVerified = true;
 			System.out.println();
-                        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t    Phone Number Verified Successfully!" + RESET);
+                        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\tPhone Number Verified Successfully!" + RESET);
                     }
                 } else {
 		    System.out.println();
-                    System.out.println(RED + "\t\t\t\t\t\t\t\tInvalid Phone Number. Please try again." + RESET);
+                    System.out.println(RED + "\t\t\t\t\t\t\t\t\tInvalid Phone Number. Please try again." + RESET);
+		    System.out.println();
                 }
             }
 
             // If both are verified, exit the loop
             if (isEmailVerified && isPhoneVerified) {
 		System.out.println();
-                System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t    Both Email and Phone Verified Successfully!" + RESET);
+                System.out.println(GREEN + "\t\t\t\t\t\t\t\t    Both Email and Phone Verified Successfully!" + RESET);
                 break;
             }
         }
     }
 }
+
+
 
 
 
@@ -1307,7 +1495,8 @@ class Welcome {
 
         //Credit.cred();
 
-        //Source.source();
+        
+	//Source.source();
 	
 	Choose.choose();
 
