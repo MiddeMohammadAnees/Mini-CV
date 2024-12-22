@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.ArrayList;
 
 // Class to store credentials
 
@@ -765,16 +766,19 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
 		if(n1==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n1==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -791,15 +795,19 @@ while(true){
 	System.out.println(); 
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Chips Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n2=sc.nextInt();
 		if(n2==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n2==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 
 		break rev;
 		}
@@ -815,16 +823,19 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"   + "The Price for "+qty2+" Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n3=sc.nextInt();
 		if(n3==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n3==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -840,16 +851,19 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n4=sc.nextInt();
 		if(n4==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n4==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -868,6 +882,7 @@ while(true){
 
 	else if(choice ==2){
 			User.Pri_Det();
+
 		break rev;
 	}
 	else {
@@ -938,16 +953,19 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
 		if(n1==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n1==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -963,16 +981,19 @@ while(true){
 	System.out.println(); 
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Fruit Platter Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n2=sc.nextInt();
 		if(n2==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n2==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -987,16 +1008,19 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"  + "The Price for "+qty2+" Premium Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n3=sc.nextInt();
 		if(n3==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n3==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -1012,17 +1036,20 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
 		int n4=sc.nextInt();
 		if(n4==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n4==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -1112,16 +1139,19 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
 		if(n1==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n1==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		
 		}
@@ -1137,17 +1167,20 @@ while(true){
 	System.out.println(); 
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Pasta Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
 		int n2=sc.nextInt();
 		if(n2==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n2==3){
 		BillGenerator.billgenerator();
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -1162,19 +1195,23 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"  + "The Price for "+qty2+" Salad Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
 
 		int n3=sc.nextInt();
 		if(n3==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n3==3){
+
 		BillGenerator.billgenerator();
 
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -1190,18 +1227,21 @@ while(true){
 	System.out.println();
         System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
-        System.out.println(CYAN + "\t\t\t\t\t\t\t\t  1.Continue        2.Another Snack        3.Confirm"+ RESET);
+        System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
 		int n4=sc.nextInt();
 		if(n4==1){
 		User.Pri_Det();
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else if(n4==3){
 		BillGenerator.billgenerator();
 
 		User.Pri_Det();
-
+		Pass passManager = new Pass();
+        	passManager.managePassengers();
 		break rev;
 		}
 		else
@@ -1305,6 +1345,7 @@ class BillGenerator {
 
    	 System.out.printf(CYAN + "\t\t\t\t\t\t\t\t%-20s %d x %.2f = %.2f\n" + RESET, 
                       itemNames[i], itemQuantities[i], itemPrices[i], itemTotal);
+	System.out.println();
 	}
 	System.out.println();
 	System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t------------------------------------------------------" + RESET);
@@ -1442,9 +1483,139 @@ class User extends Primary_Details {
     }
 }
 
+class Pass {
 
+    // ANSI escape codes for colors
+    public static final String RESET = "\u001B[0m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String MAGENTA = "\u001B[35m";
+    public static final String BLUE = "\u001B[34m";
+    public static final String RED = "\u001B[91m";
+    public static final String BRIGHTCYAN = "\u001B[96m";
+    public static final String BRIGHTMAGENTA = "\u001B[95m";
+    public static final String BRIGHTYELLOW = "\u001B[93m";
 
+    static Scanner sc = new Scanner(System.in);
+    ArrayList<Passenger> passengers;
 
+    public Pass() {
+        passengers = new ArrayList<>();
+    }
+
+    // Inner class to represent a passenger
+    static class Passenger {
+        String name;
+        int age;
+        String gender;
+
+        public Passenger(String name, int age, String gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+
+        public void displayDetails() {
+            System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "      Passenger Name: " +RESET+BRIGHTYELLOW+name+ "\n" + RESET);
+		System.out.println();
+            System.out.print(BRIGHTCYAN  + "\t\t\t\t\t\t\t\t\t" + "      Passanger Age: " +RESET+BRIGHTYELLOW+age+ "\n" + RESET);
+		System.out.println();
+            System.out.print(BRIGHTCYAN  + "\t\t\t\t\t\t\t\t\t" + "      Passenger Gender: "+RESET+BRIGHTYELLOW+gender+ "\n" + RESET);
+		System.out.println();
+
+        }
+    }
+
+    // Method to add a passenger
+    public void addPassenger(String name, int age, String gender) {
+        Passenger newPassenger = new Passenger(name, age, gender);
+        passengers.add(newPassenger);
+
+    }
+
+    // Method to display all passengers
+    public void displayPassengers() {
+        if (passengers.isEmpty()) {
+                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    No passengers added yet." + RESET);
+        } else {
+		System.out.println();
+            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t   >>>>>>>>>>>>>>>>>> Passenger Details are<<<<<<<<<<<<<<<<<<" + RESET);
+		System.out.println();
+            for (Passenger passenger : passengers) {
+                passenger.displayDetails();
+		System.out.println();
+            }
+        }
+    }
+
+    // Main logic for the program
+    public void managePassengers() {
+        while (true) {
+            System.out.println();
+            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t   >>>>>>>>>>>>>>>>>> Passenger Details <<<<<<<<<<<<<<<<<<" + RESET);
+            System.out.println();
+            System.out.print(CYAN + "\t\t\t\t\t\t\t\t\t" + "     1. Add Passenger " + "\n" + RESET);
+            System.out.println();
+            System.out.print(CYAN + "\t\t\t\t\t\t\t\t\t" + "     2. View Passengers " + "\n" + RESET);
+            System.out.println();
+            System.out.print(CYAN + "\t\t\t\t\t\t\t\t\t" + "     3. Exit " + "\n" + RESET);
+            System.out.println();
+            System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "     Choose an Option" + "\n" + RESET);
+            System.out.println();
+            System.out.println(MAGENTA + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
+
+            int n = sc.nextInt();
+            sc.nextLine();
+
+            switch (n) {
+                case 1:
+                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "   Enter Passenger Name " + "\n" + RESET);
+                    String name = sc.next();
+                    System.out.println();
+                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "   Enter Passenger Age " + "\n" + RESET);
+                    int age = sc.nextInt();
+
+                    // Gender selection
+                    System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "    Select Gender " + "\n" + RESET);
+                    System.out.println(CYAN + "\t\t\t\t\t\t\t\t" + "      1. Male      2.Female     3.Others"   + RESET);
+
+                    int genderOption = sc.nextInt();
+                    String gender = "";
+
+                    switch (genderOption) {
+                        case 1:
+                            gender = "Male";
+                            break;
+                        case 2:
+                            gender = "Female";
+                            break;
+                        case 3:
+                            gender = "Other";
+                            break;
+                        default:
+                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Invalid option. Defaulting to 'Other'." + RESET);
+                            gender = "Other";
+                    }
+
+                    addPassenger(name, age, gender);
+                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "Passenger added successfully!" + "\n" + RESET);
+                    break;
+
+                case 2:
+                    displayPassengers();
+                    break;
+
+                case 3:
+                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t\t" + "Thank You" + "\n" + RESET);
+                    return;
+
+                default:
+                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Invalid Input. Please try again..." + RESET);
+            }
+        }
+    }
+}
 
 class Welcome {
 
