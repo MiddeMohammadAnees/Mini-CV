@@ -267,7 +267,7 @@ class Source extends Credit {
                         src = sc.nextLine();
                         System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t" + "\t   Enter Destination " + "\n" + RESET);
                         dst = sc.nextLine();
-                        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t" + "\t   Enter Date (yyyy-MM-dd): " + "\n" + RESET);
+                        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t" + "\tEnter Date (yyyy-MM-dd): " + "\n" + RESET);
 			System.out.println();
 
                         String inputDate = sc.nextLine();
@@ -367,52 +367,52 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
      static final int COST_A4 = 20;   // A4: Window seat
 
 public static void displayEconomyFeatures() {
-     System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "   Economy Class" + RESET);
+     System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Economy Class" + RESET);
      System.out.println();
 
-    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTYELLOW + "\t         Seat Number\t    \t    \t    Type \t\t\t AV/NA   \t\t      Cost " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                  	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTYELLOW + "\t         Seat Number\t    \t    \t    Type \t\t\t AV/NA   \t\t      Cost " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                  	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
     
     // Series B
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                  	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                  	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
     
     // Series C
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                  	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                  	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
     
-    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+   System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------");
 
 	while(true){
 			System.out.println();
-                	System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Enter the Seat Number" + RESET);
+                	System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t" + "\t  Enter the Seat Number" + RESET);
 			String seat = sc.next();
 		
 		if(seat.equals("A1") ||seat.equals("A1") ||seat.equals("A4") ||seat.equals("B1") ||seat.equals("B4") ||seat.equals("C1") ||seat.equals("C4") ){
 			selectedSeat = seat;
-    			System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t " + seat + " is a Window Seat"+ RESET);
+    			System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t   " + seat + " is a Window Seat"+ RESET);
 			System.out.println();
 	
 			System.out.println();
@@ -429,7 +429,7 @@ public static void displayEconomyFeatures() {
 		}
 
 		else if(seat.equals("A3") ||seat.equals("B3") ||seat.equals("C3") ){
-     			System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t " + seat + " is a Window Seat"+ RESET);
+     			System.out.println(BRIGHTYELLOW +  "\t\t\t\t\t\t\t\t\t   " + seat + " is a Window Seat"+ RESET);
 			selectedSeat = seat;
 			System.out.println();
 			System.out.println();
@@ -466,51 +466,51 @@ class PremiumClass extends Source {
     private static final int COST_A4 = 22;   // A4: Window seat
 
 public static void displayPremiumFeatures() {
-     System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "   Premium Class" + RESET);
+     System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Premium Class" + RESET);
      System.out.println();
 
-    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTYELLOW + "\t         Seat Number\t    \t    \t    Type \t\t\t AV/NA   \t\t      Cost " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                  	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
+   System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTYELLOW + "\t         Seat Number\t    \t    \t    Type \t\t\t AV/NA   \t\t      Cost " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                  	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             A4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
     
     // Series B
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                  	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                  	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             B4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
     
     // Series C
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                  	      |");
-    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
-    System.out.println("             	   |                                                                                                                 	      |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C1\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A1 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C2\t    \t    \t \t   Middle  \t\t\t  NA  \t\t\t      $" + COST_A2 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C3\t    \t    \t \t   Aisle  \t\t\t  AV  \t\t\t      $" + COST_A3 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                  	        |");
+    System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
+    System.out.println("             	   |                                                                                                                 	        |");
     
-    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+   System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------");
 
 	while(true){
 			System.out.println();
-                	System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Enter the Seat Number" + RESET);
+                	System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t" + "\t  Enter the Seat Number" + RESET);
 		String seat = sc.next();
 		
 		if(seat.equals("A1") ||seat.equals("A1") ||seat.equals("A4") ||seat.equals("B1") ||seat.equals("B4") ||seat.equals("C1") ||seat.equals("C4") ){
-    			System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t " + seat + " is a Window Seat"+ RESET);
+    			System.out.println(BRIGHTYELLOW +  "\t\t\t\t\t\t\t\t\t   " + seat + " is a Window Seat"+ RESET);
 			System.out.println();
 			System.out.println();
 				break;
@@ -526,7 +526,7 @@ public static void displayPremiumFeatures() {
 		}
 
 		else if(seat.equals("A3") ||seat.equals("B3") ||seat.equals("C3") ){
-    			System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t " + seat + " is a Window Seat"+ RESET);
+    			System.out.println(BRIGHTYELLOW +  "\t\t\t\t\t\t\t\t\t   " + seat + " is a Window Seat"+ RESET);
 			System.out.println();
 			System.out.println();
 				break;
@@ -561,7 +561,7 @@ class BusinessClass extends Source {
     private static final int COST_A4 = 24;   // A4: Window seat
 
 public static void displayBusinessFeatures() {
-     System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "   Bussiness Class" + RESET);
+     System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Bussiness Class" + RESET);
      System.out.println();
     System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
     System.out.println("             	   |                                                                                                                 	      |");
@@ -646,32 +646,32 @@ class Choose{
 	public static void choose(){
 		Scanner sc = new Scanner(System.in);
 		System.out.println();
-                System.out.println(YELLOW + "                    --------------------------------------------------------------------------------------------------------------------------");
+                System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
 		
-		System.out.println("             	   |                                                                                                                 	      |");
+		System.out.println("             	   |                                                                                                                 	        |");
                     
-		System.out.println("            	   |   " + BLUE + "S.No.\t   Feature \t    Economy Class \t Premium Economy Class   \t Business Class   " + RESET + YELLOW + "\t\t      |");
-                System.out.println("             	   |                                                                                                                          |");
-		System.out.println("            	   |     " + GREEN + "1\tSeating Comfort     Standard seats\t      Wider seats    \t\t recliners seats " + RESET + YELLOW + "\t\t      |");
-                System.out.println("             	   |                                                                                                                 	      |\t");
+		System.out.println("            	   |   " + BLUE + "          S.No.\t   Feature \t    Economy Class \t Premium Economy Class   \t Business Class   " + RESET + YELLOW + "\t        |");
+		System.out.println("             	   |                                                                                                                 	        |");
+		System.out.println("            	   |     " + GREEN + "          1\tSeating Comfort     Standard seats\t      Wider seats    \t\t recliners seats " + RESET + YELLOW + "\t        |");
+		System.out.println("             	   |                                                                                                                 	        |");
 
-		System.out.println("            	   |     " + GREEN + "2\tMeal Options  \t    Basic meals\t\t    Upgraded meals        \t Gourmet meals\t" + RESET + YELLOW + "\t\t      |");
+		System.out.println("            	   |     " + GREEN + "          2\tMeal Options  \t    Basic meals\t\t    Upgraded meals        \t Gourmet meals\t" + RESET + YELLOW + "\t        |");
 
-                System.out.println("             	   |                                                                                                                          |");
+		System.out.println("             	   |                                                                                                                 	        |");
 
-		System.out.println("            	   |     " + GREEN + "3\tAmenities \t      Basic\t\t\tUpgraded   \t\t    Opulent \t" + RESET + YELLOW + "\t\t      |");
-                System.out.println("             	   |                                                                                                                          |");
-		System.out.println("            	   |     " + GREEN + "4\tCost  \t\t     Low\t      \t     Medium - High    \t\t    Highest \t   " + RESET + YELLOW + "\t\t      |");
+		System.out.println("            	   |     " + GREEN + "          3\tAmenities \t      Basic\t\t\tUpgraded   \t\t    Opulent \t" + RESET + YELLOW + "\t        |");
+		System.out.println("             	   |                                                                                                                 	        |");
+		System.out.println("            	   |     " + GREEN + "          4\tCost  \t\t     Low\t      \t     Medium - High    \t\t    Highest \t   " + RESET + YELLOW + "\t        |");
 
-                System.out.println("             	   |                                                                                                                          |");
-                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+		System.out.println("             	   |                                                                                                                 	        |");
+                System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
                System.out.println("");
-                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+                System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
 
-		 System.out.println("             	   |                                                                                                                          |");
-		System.out.println("            	   |   " + BRIGHTCYAN + "\t1.Economy Class \t           2. Premium Economy Class    \t\t3. Business Class         \t4.Exit" + RESET + YELLOW +"        |");
-		 System.out.println("             	   |                                                                                                                          |");
-                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+		 System.out.println("             	   |                                                                                                                          	|");
+		System.out.println("            	   |   " + BRIGHTCYAN + "\t      1.Economy Class \t           2. Premium Economy Class    \t\t3. Business Class         \t4.Exit" + RESET + YELLOW +"        	|");
+		 System.out.println("             	   |                                                                                                                          	|");
+                System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
 
 		System.out.println();
 		
@@ -742,7 +742,7 @@ class EcoFood extends Upgrade {
     @Override
     public void displayFeatures() {
 	Scanner sc = new Scanner(System.in);
-         System.out.println(RED + "\t\t\t\t\t\t\t" + " 1.Flex Plus               2. Saver              3.Exit" + RESET);
+         System.out.println(RED + "\t\t\t\t\t\t\t" + "      1.Flex Plus          2. Saver          3.Exit" + RESET);
 	System.out.println();
 
 
@@ -755,29 +755,29 @@ while(true){
         // Adding food and snacks options
         System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Choose Food/Snack Option" + RESET);
 
-	System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+        System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
 
-	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTYELLOW + "\tFood/Snack \t           Quantity   \t\t Price " + RESET + YELLOW +"                \t\t      |");
-	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t1.Sandwich \t               1   \t\t  $5 " + RESET + YELLOW +"                \t\t      |");
-	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Chips \t               1   \t\t  $2 " + RESET + YELLOW +"                \t\t      |");
-	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Soft Drink \t               1   \t\t  $3 " + RESET + YELLOW +"                \t\t      |");
-	System.out.println("             	   |                                                                                                                          |");
-	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle \t               1   \t\t  $1 " + RESET + YELLOW +"                \t\t      |");
+	System.out.println("             	   |                                                                                                                            |");
+	System.out.println("                   |\t\t            	      " + BRIGHTYELLOW + "\tFood/Snack \t           Quantity                 Price " + RESET + YELLOW +"                \t        |");
+	System.out.println("             	   |                                                                                                                            |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t1.Sandwich \t               1                      $5 " + RESET + YELLOW +"                \t        |");
+	System.out.println("             	   |                                                                                                                            |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t2.Chips \t               1                      $2 " + RESET + YELLOW +"                \t        |");
+	System.out.println("             	   |                                                                                                                            |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t3.Soft Drink \t               1                      $3 " + RESET + YELLOW +"                \t        |");
+	System.out.println("             	   |                                                                                                                            |");
+	System.out.println("                   |\t\t            	      " + BRIGHTCYAN + "\t4.Water Bottle \t               1                      $1 " + RESET + YELLOW +"                \t        |");
 
-        System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+        System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
 
 	System.out.println();
-        System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
-		 System.out.println("             	   |                                                                                                                          |"+RESET);
-		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t      |");
-		 System.out.println("             	   |                                                                                                                          |");
-                System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+        System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
+		 System.out.println("             	   |                                                                                                                            |"+RESET);
+		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t        |");
+		 System.out.println("             	   |                                                                                                                            |");
+        System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
 		System.out.println();
-        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t"  + "Select Food/Snack Option" + RESET);
+        System.out.println(BRIGHTMAGENTA +"\t\t\t\t\t\t\t\t\t" + "Select Food/Snack Option" + RESET);
 
         int foodChoice = sc.nextInt();
 	
@@ -786,12 +786,12 @@ while(true){
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Sandwich"+ RESET);
 
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty+" Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
@@ -813,16 +813,16 @@ while(true){
         break ;
 
             case 2:
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Chips"+ RESET);
+        System.out.println(BRIGHTCYAN +  "\t\t\t\t\t\t\t\t\t" + "You have selected Chips"+ RESET);
  
 
 	System.out.println();
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t"  + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty1=sc.nextInt();
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty1+ RESET);
+        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty1+ RESET);
 	System.out.println(); 
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Chips Quantity is: "+"$"+(qty1*2)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty1+" Chips Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n2=sc.nextInt();
@@ -844,14 +844,14 @@ while(true){
         break ;
 
             case 3:
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Soft Drink"+ RESET);
+        System.out.println(BRIGHTCYAN +  "\t\t\t\t\t\t\t\t\t" + "You have selected Soft Drink"+ RESET);
  
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 	int qty2=sc.nextInt();
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
+        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty2+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"   + "The Price for "+qty2+" Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty2+" Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n3=sc.nextInt();
@@ -875,12 +875,12 @@ while(true){
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Water Bottle"+ RESET);
  
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty3=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity ais: "+qty3+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity ais: "+qty3+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n4=sc.nextInt();
@@ -933,7 +933,7 @@ class PreFood extends Upgrade {
     @Override
     public void displayFeatures() {
 	Scanner sc = new Scanner(System.in);
-         System.out.println(RED + "\t\t\t\t\t\t\t" + " 1.Flex Plus               2. Saver              3.Exit" + RESET);
+         System.out.println(RED + "\t\t\t\t\t\t\t" + "      1.Flex Plus          2. Saver          3.Exit" + RESET);
 	System.out.println();
 
 
@@ -945,7 +945,7 @@ rev:while(true){
 	if(choice==1){
 while(true){
         // Adding food and snacks options
-        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t"+ "Choose Food/Snack Option" + RESET);
+        System.out.println(BRIGHTMAGENTA +"\t\t\t\t\t\t\t\t\t" + "Select Food/Snack Option" + RESET);
 
 	System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 
@@ -977,12 +977,12 @@ while(true){
             case 1:
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Gourmet Sandwich "+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t"  + "Entered Quantity is: "+qty+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
@@ -1003,14 +1003,14 @@ while(true){
         break ;
 
             case 2:
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "You have selected Fruit Platter"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Fruit Platter"+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty1=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t"  + "Entered Quantity is: "+qty1+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty1+ RESET);
 	System.out.println(); 
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Fruit Platter Quantity is: "+"$"+(qty1*2)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty1+" Fruit Platter Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n2=sc.nextInt();
@@ -1031,13 +1031,13 @@ while(true){
         break ;
 
             case 3:
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Premium Soft Drink"+ RESET);
+        System.out.println(BRIGHTCYAN +  "\t\t\t\t\t\t\t\t\t" + "You have selected Premium Soft Drink"+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t"  + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 	int qty2=sc.nextInt();
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
+        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty2+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"  + "The Price for "+qty2+" Premium Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty2+" Premium Soft Drink Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n3=sc.nextInt();
@@ -1060,12 +1060,12 @@ while(true){
             case 4:
         System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Water Bottle"+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t"+ "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty3=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty3+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
@@ -1119,7 +1119,7 @@ class BussFood extends Upgrade {
     @Override
     public void displayFeatures() {
 	Scanner sc = new Scanner(System.in);
-         System.out.println(RED + "\t\t\t\t\t\t\t" + " 1.Flex Plus               2. Saver              3.Exit" + RESET);
+         System.out.println(RED + "\t\t\t\t\t\t\t" + "      1.Flex Plus          2. Saver          3.Exit" + RESET);
 	System.out.println();
 
 
@@ -1131,7 +1131,7 @@ rev:while(true){
 	if(choice==1){
 while(true){
         // Adding food and snacks options
-        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t" + "Choose Food/Snack Option" + RESET);
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t\t\t" + "Choose Food/Snack Option" + RESET);
 
 	System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 
@@ -1151,7 +1151,7 @@ while(true){
 	System.out.println();
         System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
 		 System.out.println("             	   |                                                                                                                          |"+RESET);
-		System.out.println("            	   |"+RESET+RED+"\t\t\t   			5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t      |");
+		System.out.println("            	   |"+RESET+RED+"\t\t\t\t\t   			5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t      |");
 		 System.out.println("             	   |                                                                                                                          |");
                 System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
 		System.out.println();
@@ -1161,14 +1161,14 @@ while(true){
 	
         switch (foodChoice) {
             case 1:
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Gourmet Sandwich"+ RESET);
+        System.out.println(BRIGHTCYAN +  "\t\t\t\t\t\t\t\t\t" + "You have selected Gourmet Sandwich"+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty=sc.nextInt();
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty+ RESET);
+        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty+" Gourmet Sandwich Quantity is: "+"$"+(qty*5)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 		int n1=sc.nextInt();
@@ -1189,14 +1189,14 @@ while(true){
 		else
         break ;
             case 2:
-        System.out.println(BRIGHTCYAN +"\t\t\t\t\t\t\t\t\t"  + "You have selected Pasta"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Pasta"+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t"  + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty1=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty1+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty1+ RESET);
 	System.out.println(); 
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty1+" Pasta Quantity is: "+"$"+(qty1*2)+ RESET);
+        System.out.println(BRIGHTYELLOW+ "\t\t\t\t\t\t\t\t  " + "The Price for "+qty1+" Pasta Quantity is: "+"$"+(qty1*2)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
@@ -1218,13 +1218,13 @@ while(true){
         break ;
 
             case 3:
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Salad"+ RESET);
+        System.out.println(BRIGHTCYAN +  "\t\t\t\t\t\t\t\t\t" + "You have selected Salad"+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t"+ "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 	int qty2=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty2+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty2+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t"  + "The Price for "+qty2+" Salad Quantity is: "+"$"+(qty2*3)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty2+" Salad Quantity is: "+"$"+(qty2*3)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
@@ -1249,14 +1249,14 @@ while(true){
         break ;
 
             case 4:
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "You have selected Water Bottle"+ RESET);
+        System.out.println(BRIGHTCYAN +  "\t\t\t\t\t\t\t\t\t" + "You have selected Water Bottle"+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Enter the Quantity"+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "   Enter the Quantity"+ RESET);
 
 	int qty3=sc.nextInt();
-        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Entered Quantity is: "+qty3+ RESET);
+        System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "  Entered Quantity is: "+qty3+ RESET);
 	System.out.println();
-        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t" + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
+        System.out.println(BRIGHTYELLOW +"\t\t\t\t\t\t\t\t  " + "The Price for "+qty3+" Water Bottle Quantity is: "+"$"+(qty3*1)+ RESET);
 	System.out.println("\n");
         System.out.println(CYAN + "\t\t\t\t\t\t\t\t1.Continue        2.Another Snack        3.Confirm"+ RESET);
 
@@ -1358,7 +1358,7 @@ class BillGenerator {
                 } else {
 			System.out.println();
 
-                    System.out.println(RED + "\t\t\t\t\t\t\tInvalid item name. Please re-enter." + RESET);
+                    System.out.println(RED + "\t\t\t\t\t\t\t\t     Invalid item name. Please re-enter." + RESET);
 			System.out.println();
                 }
 
@@ -1446,7 +1446,7 @@ abstract class Primary_Details {
         System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t        Enter the OTP: " + RESET);
         int enteredOtp = sc.nextInt();
         if (enteredOtp == generatedOtp) {
-            System.out.println(CYAN + "\t\t\t\t\t\t\t\t\t    OTP Verified Successfully!" + RESET);
+            System.out.println(CYAN + "\t\t\t\t\t\t\t\t\t  OTP Verified Successfully!" + RESET);
             return true;
         } else {
 		System.out.println();
@@ -1506,7 +1506,7 @@ class User extends Primary_Details {
             // Phone Verification
             while (!isPhoneVerified) {
                 System.out.println();
-                System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter the Phone Number: " + RESET);
+                System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t   Enter the Phone Number: " + RESET);
                 phoneNumber = sc.next(); // Assign to the static variable
                 if (obj.isMobileNumberValid(phoneNumber)) {
                     int phoneOtp = obj.generateOtp();
@@ -1568,11 +1568,11 @@ class Pass {
     }
 
     public void displayDetails() {
-        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "      Passenger Name: " + RESET + BRIGHTYELLOW + name + "\n" + RESET);
+        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Name: " + RESET + BRIGHTYELLOW + name + "\n" + RESET);
         System.out.println();
-        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "      Passenger Age: " + RESET + BRIGHTYELLOW + age + "\n" + RESET);
+        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Age: " + RESET + BRIGHTYELLOW + age + "\n" + RESET);
         System.out.println();
-        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "      Passenger Gender: " + RESET + BRIGHTYELLOW + gender + "\n" + RESET);
+        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Gender: " + RESET + BRIGHTYELLOW + gender + "\n" + RESET);
         System.out.println();
     }
 }
@@ -1591,7 +1591,7 @@ class Pass {
                         System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    No passengers added yet." + RESET);
         } else {
 		System.out.println();
-            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t   >>>>>>>>>>>>>>>>>> Passenger Details are <<<<<<<<<<<<<<<<<<" + RESET);
+            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t >>>>>>>>>>>>>>>>>> Passenger Details are <<<<<<<<<<<<<<<<<<" + RESET);
 		System.out.println();
             for (Passenger passenger : passengers) {
                 passenger.displayDetails();
@@ -1604,7 +1604,7 @@ class Pass {
     public void managePassengers() {
         while (true) {
             System.out.println();
-            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t   >>>>>>>>>>>>>>>>>> Passenger Details <<<<<<<<<<<<<<<<<<" + RESET);
+            System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t >>>>>>>>>>>>>>>>>> Passenger Details <<<<<<<<<<<<<<<<<<" + RESET);
             System.out.println();
             System.out.print(CYAN + "\t\t\t\t\t\t\t\t\t" + "     1. Add Passenger " + "\n" + RESET);
             System.out.println();
@@ -1621,15 +1621,17 @@ class Pass {
 
             switch (n) {
                 case 1:
-                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "   Enter Passenger Name " + "\n" + RESET);
+                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter Passenger Name " + "\n" + RESET);
                     String name = sc.next();
                     System.out.println();
-                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "   Enter Passenger Age " + "\n" + RESET);
+                    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter Passenger Age " + "\n" + RESET);
                     int age = sc.nextInt();
 
                     // Gender selection
-                    System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "    Select Gender " + "\n" + RESET);
+                    System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "     Select Gender " + "\n" + RESET);
+			System.out.println();
                     System.out.println(CYAN + "\t\t\t\t\t\t\t\t" + "      1. Male      2.Female     3.Others"   + RESET);
+			System.out.println();
 
                     int genderOption = sc.nextInt();
                     String gender = "";
@@ -1645,12 +1647,14 @@ class Pass {
                             gender = "Other";
                             break;
                         default:
-                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Invalid option. Defaulting to 'Other'." + RESET);
+                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "Invalid option. Defaulting to 'Other'." + RESET);
+			System.out.println();
                             gender = "Other";
                     }
 
                     addPassenger(name, age, gender);
                     System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "Passenger added successfully!" + "\n" + RESET);
+			System.out.println();
                     break;
 
                 case 2:
@@ -1661,7 +1665,7 @@ class Pass {
     		     if (passengers.isEmpty()) {
         			System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "No passengers to review." + RESET);
     		     } else {
-        		   System.out.println(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "Reviewing all passenger details..." + RESET);
+        		   System.out.println(CYAN + "\t\t\t\t\t\t\t\t" + "    Reviewing all passenger details..." + RESET);
         			for (Passenger passenger : passengers) {
 					
            		 		View.view(passenger); // Pass each passenger to the View.view() method
@@ -1670,7 +1674,7 @@ class Pass {
 
        			 // Pass the list of passengers to the phonepayment method
 				try{
-					Thread.sleep(1000);
+					Thread.sleep(2100);
 				}
 				catch(Exception e){}
 				
@@ -1717,29 +1721,29 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
 
 	public static void view(Pass.Passenger passenger){
 		System.out.println();
-	System.out.println(BRIGHTMAGENTA+ "\t\t\t\t\t\t       ...................... ReView ......................" + RESET);
+	System.out.println(BRIGHTMAGENTA+ "\t\t\t\t\t\t\t...................... ReView ......................" + RESET);
 
 		System.out.println();
 
-    		System.out.println(BRIGHTBLACK + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
-		System.out.println(BRIGHTBLACK  + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |           						    "+RESET+CYAN+"1.Name:"+RESET+ORANGE+passenger.name+RESET+"                               		      \t      |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |           						    "+RESET+CYAN+"2.Age:"+RESET+ORANGE+passenger.age+RESET+"                               		     \t      |"+RESET);
-		System.out.println(BRIGHTBLACK  + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK+ "             	   |           						    "+RESET+CYAN+"3.Gender:"+RESET+ORANGE+passenger.gender+RESET+"                                            	      |"+RESET);
-		System.out.println(BRIGHTBLACK  + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK+ "             	   |           						    "+RESET+CYAN+"4.Mobile Number:"+RESET+ORANGE+User.getPhoneNumber()+RESET+"                               	      |"+RESET);
-		System.out.println(BRIGHTBLACK  + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |           						    "+RESET+CYAN+"5.Email:"+RESET+ORANGE+User.getEmail()+RESET+"                               	              |"+RESET);
-		System.out.println(BRIGHTBLACK  + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |           						    "+RESET+CYAN+"6.Source:"+RESET+ORANGE+Source.getSrc()+RESET+"                               	\t      |"+RESET);
-		System.out.println(BRIGHTBLACK  + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |           						    "+RESET+CYAN+"7.Destination:"+RESET+ORANGE+Source.getDst()+RESET+"                               	\t      |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK + "             	   |           						    "+RESET+CYAN+"8.Date:"+RESET+ORANGE+Source.getDate1()+RESET+"                               	\t              |"+RESET);
-		System.out.println(BRIGHTBLACK  + "             	   |                                                                                                                          |"+RESET);
-		System.out.println(BRIGHTBLACK  + "                   ----------------------------------------------------------------------------------------------------------------------------"+RESET);
+    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     1.Name:"+RESET+ORANGE+passenger.name+RESET+BRIGHTBLACK+"     		         |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     2.Age:"+RESET+ORANGE+passenger.age+RESET+BRIGHTBLACK+"     		         |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK+"\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     3.Gender:"+RESET+ORANGE+passenger.gender+RESET+BRIGHTBLACK+"     		         |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK+ "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     4.Mobile Number:"+RESET+ORANGE+User.getPhoneNumber()+RESET+BRIGHTBLACK+"          |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     5.Email:"+RESET+ORANGE+User.getEmail()+RESET+BRIGHTBLACK+"     		 |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     6.Source:"+RESET+ORANGE+Source.getSrc()+RESET+BRIGHTBLACK+"     		         |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     7.Destination:"+RESET+ORANGE+Source.getDst()+RESET+BRIGHTBLACK+"     	         |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     8.Date:"+RESET+ORANGE+Source.getDate1()+RESET+BRIGHTBLACK+"     		         |"+RESET);
+		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
+    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------"+RESET);
 		
 
 	}
@@ -1753,7 +1757,9 @@ class PhonePay extends EconomyClass {
 
     public static void phonepayment(List<Pass.Passenger> passengers) {
         if (passengers.isEmpty()) {
-            System.out.println("\t\t\t\t\t\t\t\t\t No passengers found. Please add passengers first.");
+		System.out.println();
+            System.out.println(RED+"\t\t\t\t\t\t\t\tNo passengers found. Please add passengers first."+RESET);
+		System.out.println();
             return;
         }
 
@@ -2010,12 +2016,12 @@ class Welcome {
                 + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= "
                 + RESET);
 
-        Credit.cred();
+        //Credit.cred();
 
         
-	Source.source();
+	//Source.source();
 	
-	//Choose.choose();
+	Choose.choose();
 
 	EconomyClass.displayEconomyFeatures();
 	PremiumClass.displayPremiumFeatures();
