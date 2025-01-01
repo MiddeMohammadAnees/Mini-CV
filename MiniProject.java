@@ -1660,27 +1660,26 @@ class Pass {
                 case 2:
                     displayPassengers();
                     break;
-
 		case 3:
-    		     if (passengers.isEmpty()) {
+    			if (passengers.isEmpty()) {
         			System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "No passengers to review." + RESET);
-    		     } else {
-        		   System.out.println(CYAN + "\t\t\t\t\t\t\t\t" + "    Reviewing all passenger details..." + RESET);
+    			} else {
+        			System.out.println(GREEN + "\t\t\t\t\t\t\t\t" + "          Reviewing all passenger details..." + RESET);
         			for (Passenger passenger : passengers) {
-					
-           		 		View.view(passenger); // Pass each passenger to the View.view() method
-        			}
-   		       }
+            				View.view(passenger, passengers); // Pass each passenger and the full list
+       				 }			
+    			}
 
-       			 // Pass the list of passengers to the phonepayment method
-				try{
-					Thread.sleep(2100);
-				}
-				catch(Exception e){}
-				
-        			PhonePay.phonepayment(passengers);
-				
-    			return;
+    		// Pass the list of passengers to the phonepayment method
+   		 try {
+       			 Thread.sleep(2100);
+    		} catch (Exception e) {
+        		e.printStackTrace();
+    		}
+
+    		PhonePay.phonepayment(passengers);
+    		return;
+
                 default:
                         System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Invalid Input. Please try again..." + RESET);
             }
@@ -1719,9 +1718,9 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
 	
 
 
-	public static void view(Pass.Passenger passenger){
+	public static void view(Pass.Passenger passenger, List<Pass.Passenger> passengers){
 		System.out.println();
-	System.out.println(BRIGHTMAGENTA+ "\t\t\t\t\t\t\t...................... ReView ......................" + RESET);
+	System.out.println(BRIGHTMAGENTA+ "\t\t\t\t\t\t\t   ....................... ReView ....................... " + RESET);
 
 		System.out.println();
 
@@ -1744,9 +1743,10 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
 		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     8.Date:"+RESET+ORANGE+Source.getDate1()+RESET+BRIGHTBLACK+"     		         |"+RESET);
 		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
     		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------"+RESET);
-		
-
+	
+		 PaymentMethod.payments(passengers);
 	}
+
 
 }
 
@@ -1765,7 +1765,8 @@ class PhonePay extends EconomyClass {
 
         double grandTotal = 0; // Accumulate total for all passengers
 	System.out.println();
-        System.out.println(PINK+"\t\t\t\t\t\t\t\t\t Payment Details:"+RESET);
+	System.out.println(PINK+ "\t\t\t\t\t\t            ................... Payment Details ................... " + RESET);
+	System.out.println();
 
         // Iterate through passengers and calculate cost for each
         for (Pass.Passenger passenger : passengers) {
@@ -1798,21 +1799,36 @@ class PhonePay extends EconomyClass {
 
             double finalAmount = totalCost - discountAmount;
 
-            System.out.println("\n\t\t\t\t\t\t\t\t\t Passenger: " + passenger.name);
-            System.out.printf("\t\t\t\t\t\t\t\t\t   Base Cost: $%.2f\n", baseCost);
-            System.out.printf("\t\t\t\t\t\t\t\t\t   Tax: $%.2f\n", taxAmount);
-            System.out.printf("\t\t\t\t\t\t\t\t\t   Discount: -$%.2f\n", discountAmount);
-            System.out.printf("\t\t\t\t\t\t\t\t\t   Final Amount (with tax & discount): $%.2f\n", finalAmount);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   1.Passanger: "+RESET+ORANGE+passenger.name+RESET+BRIGHTBLACK+"     		   |"+RESET);
+ 	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   2.Base Cost: "+RESET+ORANGE+"$"+baseCost+RESET+BRIGHTBLACK+"     		   |"+RESET);
+	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   3.Tax: "+RESET+ORANGE+"$"+taxAmount+RESET+BRIGHTBLACK+"     		           |"+RESET);
+	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   4.Discount: "+RESET+ORANGE+"-$"+discountAmount+RESET+BRIGHTBLACK+"     		   |"+RESET);
+	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   5.Final Amount(tax & discount): "+RESET+ORANGE+"$"+finalAmount+RESET+BRIGHTBLACK+"   |"+RESET);
+	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
 
             // Include food costs for each passenger
             double passengerTotal = finalAmount + BillGenerator.totalAmount;
-            System.out.printf("\t\t\t\t\t\t\t\t\t   Total (with food): $%.2f\n\n", passengerTotal);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   6.Total (with food): "+RESET+ORANGE+"$"+passengerTotal+RESET+BRIGHTBLACK+"   	   |"+RESET);
+
+            //System.out.printf("\t\t\t\t\t\t\t\t\t   Total (with food): $%.2f\n\n", passengerTotal);
 
             grandTotal += passengerTotal;
         }
+	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
 
-        System.out.printf("\t\t\t\t\t\t\t\t\t Grand Total for All Passengers: $%.2f\n", grandTotal);
-    }
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   7.Grand Total:  "+RESET+ORANGE+"$"+grandTotal+RESET+BRIGHTBLACK+" \t\t   |"+RESET);
+	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+	System.out.println();
+
+ 
+   }
 }
 
 
@@ -1922,12 +1938,20 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
 
 public static void payments(List<Pass.Passenger> passengers) {
     System.out.println();
-    System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t   ------------------Select Your Payment Mode------------------ " + RESET);
-    System.out.println("Enter 1 for PHONEPAY");
-    System.out.println("Enter 2 for CREDIT CARD");
-    System.out.println("Enter 3 for VISA");
-    System.out.println("Enter 4 for GOOGLEPAY");
-    System.out.println("Enter 5 for MASTERCARD CREDIT");
+    System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t            ---------------Select Your Payment Mode--------------- " + RESET);
+	System.out.println();
+    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 1 for PHONEPAY " + "\n" + RESET);
+	System.out.println();
+    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 2 for CREDIT CARD " + "\n" + RESET);
+
+	System.out.println();
+    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 3 for VISA " + "\n" + RESET);
+	System.out.println();
+    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 4 for GOOGLEPAY " + "\n" + RESET);
+
+	System.out.println();
+    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 5 for MASTERCARD CREDIT " + "\n" + RESET);
+
 
     int x = Payments.sc.nextInt();  
 
@@ -1935,7 +1959,9 @@ public static void payments(List<Pass.Passenger> passengers) {
 
     switch (x) {
         case 1:
-            System.out.println("         YOUR SELECTED PHONEPAY FOR PAYMENT MODE       ");
+		System.out.println();
+    		System.out.print(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED PHONEPAY FOR PAYMENT MODE " + "\n" + RESET);
+
             PhonePay.phonepayment(passengers); // Pass the passengers list
             break;
 
@@ -1963,8 +1989,11 @@ public static void payments(List<Pass.Passenger> passengers) {
             System.out.println("Invalid choice! Please select a valid payment mode.");
             return;  // Exit if invalid choice
     }
+    		
+	System.out.print(TEAL + "\t\t\t\t\t\t\t\t     PAYMENT PROCEEDED SUCCESSFULLY " + "\n" + RESET);
+
  
-    System.out.println("          payment proceeded successfully           ");
+    System.out.println("                     ");
 }
 
 }
