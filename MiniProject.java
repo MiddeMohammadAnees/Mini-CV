@@ -913,6 +913,8 @@ while(true){
 
 	else if(choice ==2){
 			User.Pri_Det();
+			Pass passManager = new Pass();
+        		passManager.managePassengers();
 
 		break rev;
 	}
@@ -1661,24 +1663,25 @@ class Pass {
                     displayPassengers();
                     break;
 		case 3:
-    			if (passengers.isEmpty()) {
-        			System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "No passengers to review." + RESET);
-    			} else {
-        			System.out.println(GREEN + "\t\t\t\t\t\t\t\t" + "          Reviewing all passenger details..." + RESET);
-        			for (Passenger passenger : passengers) {
-            				View.view(passenger, passengers); // Pass each passenger and the full list
-       				 }			
-    			}
+    if (passengers.isEmpty()) {
+        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "No passengers to review." + RESET);
+    } else {
+        System.out.println(GREEN + "\t\t\t\t\t\t\t\t" + "          Reviewing all passenger details..." + RESET);
+        for (Passenger passenger : passengers) {
+            View.view(passenger); // Display each passenger
+        }
+    }
 
-    		// Pass the list of passengers to the phonepayment method
-   		 try {
-       			 Thread.sleep(2100);
-    		} catch (Exception e) {
-        		e.printStackTrace();
-    		}
+    // Perform payment after reviewing all passengers
+    try {
+        Thread.sleep(2100);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
 
-    		PhonePay.phonepayment(passengers);
-    		return;
+    PhonePay.phonepayment(passengers); // Call the payment method once, after review
+    return;
+
 
                 default:
                         System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Invalid Input. Please try again..." + RESET);
@@ -1717,35 +1720,39 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
 
 	
 
+public static void view(Pass.Passenger passenger) {
+    System.out.println();
+    System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t   ....................... ReView ....................... " + RESET);
 
-	public static void view(Pass.Passenger passenger, List<Pass.Passenger> passengers){
-		System.out.println();
-	System.out.println(BRIGHTMAGENTA+ "\t\t\t\t\t\t\t   ....................... ReView ....................... " + RESET);
+    System.out.println();
 
-		System.out.println();
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     1.Name:" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     2.Age:" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t    3.Gender:" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     4.Mobile Number:" + RESET + ORANGE + User.getPhoneNumber() + RESET + BRIGHTBLACK + "          |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     5.Email:" + RESET + ORANGE + User.getEmail() + RESET + BRIGHTBLACK + "     		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     6.Source:" + RESET + ORANGE + Source.getSrc() + RESET + BRIGHTBLACK + "     		         |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     7.Destination:" + RESET + ORANGE + Source.getDst() + RESET + BRIGHTBLACK + "     	         |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     8.Date:" + RESET + ORANGE + Source.getDate1() + RESET + BRIGHTBLACK + "     		         |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
 
-    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     1.Name:"+RESET+ORANGE+passenger.name+RESET+BRIGHTBLACK+"     		         |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     2.Age:"+RESET+ORANGE+passenger.age+RESET+BRIGHTBLACK+"     		         |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK+"\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     3.Gender:"+RESET+ORANGE+passenger.gender+RESET+BRIGHTBLACK+"     		         |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK+ "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     4.Mobile Number:"+RESET+ORANGE+User.getPhoneNumber()+RESET+BRIGHTBLACK+"          |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     5.Email:"+RESET+ORANGE+User.getEmail()+RESET+BRIGHTBLACK+"     		 |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     6.Source:"+RESET+ORANGE+Source.getSrc()+RESET+BRIGHTBLACK+"     		         |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     7.Destination:"+RESET+ORANGE+Source.getDst()+RESET+BRIGHTBLACK+"     	         |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     "+RESET+CYAN+"\t     8.Date:"+RESET+ORANGE+Source.getDate1()+RESET+BRIGHTBLACK+"     		         |"+RESET);
-		System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t    |                                        		 |"+RESET);
-    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------"+RESET);
-	
-		 PaymentMethod.payments(passengers);
-	}
+// Prepare a list to pass to PaymentMethod
+List<Pass.Passenger> passengers = new ArrayList<>();
+passengers.add(passenger); // Add the single passenger to the list
+
+PaymentMethod.payments(passengers); // Pass the list of passengers
+
+}
 
 
 }
@@ -1801,7 +1808,7 @@ class PhonePay extends EconomyClass {
 
 	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
 	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   1.Passanger: "+RESET+ORANGE+passenger.name+RESET+BRIGHTBLACK+"     		   |"+RESET);
+	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   1.Passanger: "+RESET+ORANGE+passenger.name+RESET+BRIGHTBLACK+"          |"+RESET);
  	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
 	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   2.Base Cost: "+RESET+ORANGE+"$"+baseCost+RESET+BRIGHTBLACK+"     		   |"+RESET);
 	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
@@ -1821,10 +1828,13 @@ class PhonePay extends EconomyClass {
             grandTotal += passengerTotal;
         }
 	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
-
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   7.Grand Total:  "+RESET+ORANGE+"$"+grandTotal+RESET+BRIGHTBLACK+" \t\t   |"+RESET);
-	    System.out.println(BRIGHTBLACK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
 	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+	System.out.println();
+	    System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+
+	    System.out.println(PINK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   Grand Total:  "+RESET+ORANGE+"$"+grandTotal+RESET+PINK+" \t\t   |"+RESET);
+	    System.out.println(PINK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
+	    System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
 	System.out.println();
 
  
@@ -2045,10 +2055,10 @@ class Welcome {
                 + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= "
                 + RESET);
 
-        //Credit.cred();
+        Credit.cred();
 
         
-	//Source.source();
+	Source.source();
 	
 	Choose.choose();
 
