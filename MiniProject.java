@@ -205,6 +205,11 @@ class Source extends Credit {
     // Scanner instance for user input
     static Scanner sc = new Scanner(System.in);
 
+	static String a1 = "AI101";
+	static String a2 = "EK202";
+	static String a3 = "SQ404";
+	static String a4 = "BA303";
+ 
     public static void source() {
         Date date = new Date();
 
@@ -244,16 +249,16 @@ class Source extends Credit {
                     System.out.println("            	   |\t     " + BLUE + "\t\t      S.No.\t Flight No.\tFrom \t  To   \t Arrival Time \t  Departure Time    " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |\t                                                                                                                 	|");
 
-                    System.out.println("            	   |\t     " + GREEN + " \t\t        1\t   AI101      New York \t London     06:30AM    \t     02:00AM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("            	   |\t     " + GREEN + " \t\t        1\t   "+a1+"      New York \t London     06:30AM    \t     02:00AM       " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |\t                                                                                                                 	|");
 
-                    System.out.println("            	   |\t     " + GREEN + " \t\t        2\t   EK202      Dubai \t Mumbai     11:45PM    \t     09:30PM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("            	   |\t     " + GREEN + " \t\t        2\t   "+a2+"      Dubai \t Mumbai     11:45PM    \t     09:30PM       " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |\t                                                                                                                 	|");
 
-                    System.out.println("            	   |\t     " + GREEN + " \t\t        3\t   SQ404      Singapore  Sydney     09:00PM    \t     05:30PM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("            	   |\t     " + GREEN + " \t\t        3\t   "+a3+"      Singapore  Sydney     09:00PM    \t     05:30PM       " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |\t                                                                                                                 	|");
 
-                    System.out.println("            	   |\t     " + GREEN + " \t\t        4\t   BA303      London     Paris      08:15AM   \t     06:50AM       " + RESET + YELLOW + " 	                |");
+                    System.out.println("            	   |\t     " + GREEN + " \t\t        4\t   "+a4+"      London     Paris      08:15AM   \t     06:50AM       " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |\t                                                                                                                 	|");
 
                     System.out.println("                    ----------------------------------------------------------------------------------------------------------------------------- ");
@@ -365,6 +370,8 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
      static final int COST_A2 = 15;   // A2: Middle seat
      static final int COST_A3 = 12;   // A3: Middle seat
      static final int COST_A4 = 20;   // A4: Window seat
+
+public static String selectedSeat;
 
 public static void displayEconomyFeatures() {
      System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Economy Class" + RESET);
@@ -898,9 +905,10 @@ while(true){
 		break rev;
 		}
 		else
-        break ;
+        		break ;
             default:
                     System.out.println(RED + "Returning to the main menu..." + RESET);
+			Credit.cred();
 		break rev;
         }
 
@@ -1557,47 +1565,44 @@ class Pass {
     }
 
     // Inner class to represent a passenger
-
     static class Passenger {
-    public String name;
-    public int age;
-    public String gender;
+        public String name;
+        public int age;
+        public String gender;
 
-    public Passenger(String name, int age, String gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+        public Passenger(String name, int age, String gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+
+        public void displayDetails() {
+            System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Name: " + RESET + BRIGHTYELLOW + name + "\n" + RESET);
+            System.out.println();
+            System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Age: " + RESET + BRIGHTYELLOW + age + "\n" + RESET);
+            System.out.println();
+            System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Gender: " + RESET + BRIGHTYELLOW + gender + "\n" + RESET);
+            System.out.println();
+        }
     }
-
-    public void displayDetails() {
-        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Name: " + RESET + BRIGHTYELLOW + name + "\n" + RESET);
-        System.out.println();
-        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Age: " + RESET + BRIGHTYELLOW + age + "\n" + RESET);
-        System.out.println();
-        System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t\t" + "    Passenger Gender: " + RESET + BRIGHTYELLOW + gender + "\n" + RESET);
-        System.out.println();
-    }
-}
-
 
     // Method to add a passenger
     public void addPassenger(String name, int age, String gender) {
         Passenger newPassenger = new Passenger(name, age, gender);
         passengers.add(newPassenger);
-
     }
 
     // Method to display all passengers
     public void displayPassengers() {
         if (passengers.isEmpty()) {
-                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    No passengers added yet." + RESET);
+            System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    No passengers added yet." + RESET);
         } else {
-		System.out.println();
+            System.out.println();
             System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t >>>>>>>>>>>>>>>>>> Passenger Details are <<<<<<<<<<<<<<<<<<" + RESET);
-		System.out.println();
+            System.out.println();
             for (Passenger passenger : passengers) {
                 passenger.displayDetails();
-		System.out.println();
+                System.out.println();
             }
         }
     }
@@ -1631,9 +1636,9 @@ class Pass {
 
                     // Gender selection
                     System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "     Select Gender " + "\n" + RESET);
-			System.out.println();
-                    System.out.println(CYAN + "\t\t\t\t\t\t\t\t" + "      1. Male      2.Female     3.Others"   + RESET);
-			System.out.println();
+                    System.out.println();
+                    System.out.println(CYAN + "\t\t\t\t\t\t\t\t" + "      1. Male      2.Female     3.Others" + RESET);
+                    System.out.println();
 
                     int genderOption = sc.nextInt();
                     String gender = "";
@@ -1649,64 +1654,63 @@ class Pass {
                             gender = "Other";
                             break;
                         default:
-                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "Invalid option. Defaulting to 'Other'." + RESET);
-			System.out.println();
+                            System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "Invalid option. Defaulting to 'Other'." + RESET);
+                            System.out.println();
                             gender = "Other";
                     }
 
                     addPassenger(name, age, gender);
                     System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t" + "Passenger added successfully!" + "\n" + RESET);
-			System.out.println();
+                    System.out.println();
                     break;
 
                 case 2:
                     displayPassengers();
                     break;
-		case 3:
-    if (passengers.isEmpty()) {
-        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "No passengers to review." + RESET);
-    } else {
-        System.out.println(GREEN + "\t\t\t\t\t\t\t\t" + "          Reviewing all passenger details..." + RESET);
-        for (Passenger passenger : passengers) {
-            View.view(passenger); // Display each passenger
-        }
-    }
+                case 3:
+                    if (passengers.isEmpty()) {
+                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "No passengers to review." + RESET);
+                    } else {
+                        System.out.println(GREEN + "\t\t\t\t\t\t\t\t" + "          Reviewing all passenger details..." + RESET);
+                        // Display all passengers
+                        List<Pass.Passenger> passengersList = new ArrayList<>(passengers); // Convert passengers list to a new List
+                        View.view(passengersList); // Pass the list of passengers to the view method
+                    }
 
-    // Perform payment after reviewing all passengers
-    try {
-        Thread.sleep(2100);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
+                    // Perform payment after reviewing all passengers
+                    try {
+                        Thread.sleep(2100);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
-    PhonePay.phonepayment(passengers); // Call the payment method once, after review
-    return;
-
+                    return;
 
                 default:
-                        System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Invalid Input. Please try again..." + RESET);
+                    System.out.println(RED + "\t\t\t\t\t\t\t\t\t" + "    Invalid Input. Please try again..." + RESET);
+			return;
             }
         }
     }
 }
 
 
-class View{
+class View {
 
-// Additional ANSI escape codes for colors
-public static final String BRIGHTRED = "\u001B[91m";
-public static final String BRIGHTGREEN = "\u001B[92m";
-public static final String BRIGHTBLUE = "\u001B[94m";
-public static final String BRIGHTWHITE = "\u001B[97m";
-public static final String DARKGRAY = "\u001B[90m";
-public static final String LIGHTGRAY = "\u001B[37m";
-public static final String BRIGHTBLACK = "\u001B[90m"; // Same as dark gray
-public static final String ORANGE = "\u001B[38;5;208m"; // Custom orange
-public static final String PURPLE = "\u001B[38;5;93m"; // Custom purple
-public static final String PINK = "\u001B[38;5;206m"; // Custom pink
-public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
+    // Additional ANSI escape codes for colors
+    public static final String BRIGHTRED = "\u001B[91m";
+    public static final String BRIGHTGREEN = "\u001B[92m";
+    public static final String BRIGHTBLUE = "\u001B[94m";
+    public static final String BRIGHTWHITE = "\u001B[97m";
+    public static final String DARKGRAY = "\u001B[90m";
+    public static final String LIGHTGRAY = "\u001B[37m";
+    public static final String BRIGHTBLACK = "\u001B[90m"; // Same as dark gray
+    public static final String ORANGE = "\u001B[38;5;208m"; // Custom orange
+    public static final String PURPLE = "\u001B[38;5;93m"; // Custom purple
+    public static final String PINK = "\u001B[38;5;206m"; // Custom pink
+    public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
 
-   // ANSI escape codes for colors
+    // ANSI escape codes for colors
     public static final String RESET = "\u001B[0m";
     public static final String GREEN = "\u001B[32m";
     public static final String CYAN = "\u001B[36m";
@@ -1718,44 +1722,40 @@ public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
     public static final String BRIGHTMAGENTA = "\u001B[95m";
     public static final String BRIGHTYELLOW = "\u001B[93m";
 
-	
+    public static void view(List<Pass.Passenger> passengers) {
+        System.out.println();
+        System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t   ....................... ReView ....................... " + RESET);
 
-public static void view(Pass.Passenger passenger) {
-    System.out.println();
-    System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t\t   ....................... ReView ....................... " + RESET);
+        System.out.println();
 
-    System.out.println();
+        // Review each passenger
+        for (Pass.Passenger passenger : passengers) {
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     1.Name:" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     2.Age:" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t    3.Gender:" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     4.Mobile Number:" + RESET + ORANGE + User.getPhoneNumber() + RESET + BRIGHTBLACK + "          |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     5.Email:" + RESET + ORANGE + User.getEmail() + RESET + BRIGHTBLACK + "     		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     6.Source:" + RESET + ORANGE + Source.getSrc() + RESET + BRIGHTBLACK + "     		         |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     7.Destination:" + RESET + ORANGE + Source.getDst() + RESET + BRIGHTBLACK + "     	         |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     8.Date:" + RESET + ORANGE + Source.getDate1() + RESET + BRIGHTBLACK + "     		         |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
+        }
 
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     1.Name:" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     2.Age:" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t    3.Gender:" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     4.Mobile Number:" + RESET + ORANGE + User.getPhoneNumber() + RESET + BRIGHTBLACK + "          |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     5.Email:" + RESET + ORANGE + User.getEmail() + RESET + BRIGHTBLACK + "     		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     6.Source:" + RESET + ORANGE + Source.getSrc() + RESET + BRIGHTBLACK + "     		         |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     7.Destination:" + RESET + ORANGE + Source.getDst() + RESET + BRIGHTBLACK + "     	         |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     8.Date:" + RESET + ORANGE + Source.getDate1() + RESET + BRIGHTBLACK + "     		         |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
-
-// Prepare a list to pass to PaymentMethod
-List<Pass.Passenger> passengers = new ArrayList<>();
-passengers.add(passenger); // Add the single passenger to the list
-
-PaymentMethod.payments(passengers); // Pass the list of passengers
-
+        // After reviewing all passengers, call the payment method
+        PaymentMethod.payments(passengers); // Pass the 'passengers' list here
+    }
 }
 
-
-}
 
 class PhonePay extends EconomyClass {
 
@@ -1831,14 +1831,16 @@ class PhonePay extends EconomyClass {
 	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
 	System.out.println();
 	    System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+	    System.out.println(PINK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
 
-	    System.out.println(PINK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   Grand Total:  "+RESET+ORANGE+"$"+grandTotal+RESET+PINK+" \t\t   |"+RESET);
+	    System.out.println(PINK + "\t\t\t\t\t\t\t   |     "+RESET+CYAN+"\t   Grand Total:  "+RESET+ORANGE+"$"+grandTotal+RESET+PINK+" \t\t\t   |"+RESET);
 	    System.out.println(PINK  + "\t\t\t\t\t\t\t   |                                        		   |"+RESET);
 	    System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
 	System.out.println();
 
  
    }
+
 }
 
 
@@ -1950,17 +1952,17 @@ public static void payments(List<Pass.Passenger> passengers) {
     System.out.println();
     System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t            ---------------Select Your Payment Mode--------------- " + RESET);
 	System.out.println();
-    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 1 for PHONEPAY " + "\n" + RESET);
+    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 1 for UPI " + "\n" + RESET);
 	System.out.println();
     System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 2 for CREDIT CARD " + "\n" + RESET);
 
 	System.out.println();
-    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 3 for VISA " + "\n" + RESET);
+    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 3 for  DEBIT CARD" + "\n" + RESET);
 	System.out.println();
-    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 4 for GOOGLEPAY " + "\n" + RESET);
+    //System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 4 for GOOGLEPAY " + "\n" + RESET);
 
-	System.out.println();
-    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 5 for MASTERCARD CREDIT " + "\n" + RESET);
+	//System.out.println();
+    //System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 5 for MASTERCARD CREDIT " + "\n" + RESET);
 
 
     int x = Payments.sc.nextInt();  
@@ -1970,7 +1972,7 @@ public static void payments(List<Pass.Passenger> passengers) {
     switch (x) {
         case 1:
 		System.out.println();
-    		System.out.print(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED PHONEPAY FOR PAYMENT MODE " + "\n" + RESET);
+    		System.out.print(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED UPI FOR PAYMENT MODE " + "\n" + RESET);
 
             PhonePay.phonepayment(passengers); // Pass the passengers list
             break;
@@ -1981,11 +1983,11 @@ public static void payments(List<Pass.Passenger> passengers) {
             break;
 
         case 3:
-            System.out.println("         YOUR SELECTED VISA FOR PAYMENT MODE          ");
+            System.out.println("         YOUR SELECTED DEBIT CARD FOR PAYMENT MODE          ");
             amount = new Visa().payment();  
             break;
 
-        case 4:
+       /* case 4:
             System.out.println("       YOUR SELECTED GOOGLEPAY FOR PAYMENT MODE         ");
             amount = new GooglePay().payment();  
             break;
@@ -1994,7 +1996,7 @@ public static void payments(List<Pass.Passenger> passengers) {
             System.out.println("           YOUR SELECTED MASTERCARD CREDIT CARD FOR PAYMENT MODE         ");
             amount = new MasterCardCredit().payment();  
             break;
-
+	*/
         default:
             System.out.println("Invalid choice! Please select a valid payment mode.");
             return;  // Exit if invalid choice
@@ -2004,9 +2006,80 @@ public static void payments(List<Pass.Passenger> passengers) {
 
  
     System.out.println("                     ");
+
+	Ticket.ticket(passengers);
 }
 
 }
+
+
+class Ticket extends View{
+
+	public static String generatePNR() {
+        	String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        	Random random = new Random();
+        	StringBuilder pnr = new StringBuilder();
+
+        // Generate a PNR of 6 characters
+        for (int i = 0; i < 6; i++) {
+            int index = random.nextInt(characters.length());
+            pnr.append(characters.charAt(index));
+        }
+
+        return pnr.toString();
+
+    }
+
+	static int otp()
+	    {
+	        int random;
+	        int min = 100000;
+	        int max = 999999;
+	        Random rand = new Random();
+	        random = rand.nextInt(max - min + 1) + min;
+	        //System.out.println("Ticket No: " + random);
+		
+		return random;
+	      }
+
+
+	public static void ticket(List<Pass.Passenger> passengers){
+
+			Source  s = new Source();
+			EconomyClass e = new EconomyClass();
+			
+			Ticket obj=new Ticket();
+			obj.otp();
+        		String pnr = generatePNR();
+        
+			System.out.print(TEAL + "\t\t\t\t\t\t\t\t    Ticket " + "\n" + RESET);
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   Ticket Number: "+Ticket.otp()+RESET);
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   PNR: "+pnr+RESET);
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   Flight Number: "+s.a1+RESET);
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   Source : "+Source.getSrc()+RESET);
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   Destination: "+Source.getDst()+RESET);
+        for (Pass.Passenger passenger : passengers) {
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     1.Name:" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     2.Age:" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t    3.Gender:" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       |" + RESET);
+
+	}
+
+
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t    4.Seat:" + RESET + ORANGE + EconomyClass.selectedSeat + RESET + BRIGHTBLACK + "                       |" + RESET);
+
+
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+			
+
+	}
+}
+
 
 class Welcome {
 
@@ -2055,15 +2128,15 @@ class Welcome {
                 + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= "
                 + RESET);
 
-        Credit.cred();
+        //Credit.cred();
 
         
-	Source.source();
+	//Source.source();
 	
 	Choose.choose();
 
-	EconomyClass.displayEconomyFeatures();
-	PremiumClass.displayPremiumFeatures();
+	//EconomyClass.displayEconomyFeatures();
+	//PremiumClass.displayPremiumFeatures();
 
 
 
