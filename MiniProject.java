@@ -135,6 +135,7 @@ public static final String BRIGHTRED = "\u001B[91m";
 		catch (InputMismatchException e) {
                 System.out.println("\t\t\t\t\t\t\t\t Invalid input! Please  try again!");
                  cred();
+		break;
 		 // Clear invalid input from the scanner
             	}
             } else if (choice == 2) {
@@ -285,7 +286,7 @@ class Source extends Credit {
                     System.out.println("            	   |\t     " + GREEN + " \t\t        4\t   "+a4+"      London     Paris      08:15AM   \t     06:50AM       " + RESET + YELLOW + " 	                |");
                     System.out.println("             	   |\t                                                                                                                 	|");
 
-                    System.out.println("                    ----------------------------------------------------------------------------------------------------------------------------- ");
+                    System.out.println("                    ----------------------------------------------------------------------------------------------------------------------------- "+ RESET);
                     System.out.println("");
                     break;
 
@@ -434,7 +435,7 @@ public static void displayEconomyFeatures() {
     System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
     System.out.println("             	   |                                                                                                                 	        |");
     
-   System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------");
+   System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------"+ RESET);
 
 	while(true){
 			System.out.println();
@@ -556,7 +557,7 @@ public static void displayPremiumFeatures() {
     System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "             |");
     System.out.println("             	   |                                                                                                                 	        |");
     
-   System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------");
+   System.out.println(YELLOW + "                    -----------------------------------------------------------------------------------------------------------------------------"+ RESET);
 
 	while(true){
 			System.out.println();
@@ -676,7 +677,7 @@ public static void displayBusinessFeatures() {
     System.out.println("            	   |   " + BRIGHTCYAN + "\t             C4\t    \t    \t \t   Window  \t\t\t  AV  \t\t\t      $" + COST_A4 + "  " + RESET + YELLOW + "           |");
     System.out.println("             	   |                                                                                                                 	      |");
     
-    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------");
+    System.out.println(YELLOW + "                   ----------------------------------------------------------------------------------------------------------------------------"+ RESET);
 
 	while(true){
 			System.out.println();
@@ -757,7 +758,7 @@ class Choose{
 		 System.out.println("             	   |                                                                                                                          	|");
 		System.out.println("            	   |   " + BRIGHTCYAN + "\t      1.Economy Class \t           2. Premium Economy Class    \t\t3. Business Class         \t4.Exit" + RESET + YELLOW +"        	|");
 		 System.out.println("             	   |                                                                                                                          	|");
-                System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
+                System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- "+ RESET);
 
 		System.out.println();
 		
@@ -797,7 +798,9 @@ while (true) {
             System.out.println("Invalid input! Please enter a valid number.");
             sc.nextLine(); // Clear invalid input from the scanner
         }
+break;
     }
+
 }
 
 }
@@ -860,7 +863,7 @@ while(true){
 		 System.out.println("             	   |                                                                                                                            |");
 		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t        |");
 		 System.out.println("             	   |                                                                                                                            |");
-        System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
+        System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- "+ RESET);
 		System.out.println();
         System.out.println(BRIGHTMAGENTA +"\t\t\t\t\t\t\t\t\t" + "Select Food/Snack Option" + RESET);
 
@@ -1868,28 +1871,29 @@ class View {
         // Review each passenger
         for (Pass.Passenger passenger : passengers) {
             System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     1.Name:" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     2.Age:" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t    3.Gender:" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     4.Mobile Number:" + RESET + ORANGE + User.getPhoneNumber() + RESET + BRIGHTBLACK + "          |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     5.Email:" + RESET + ORANGE + User.getEmail() + RESET + BRIGHTBLACK + "     		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     6.Source:" + RESET + ORANGE + Source.getSrc() + RESET + BRIGHTBLACK + "     		         |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     7.Destination:" + RESET + ORANGE + Source.getDst() + RESET + BRIGHTBLACK + "     	         |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |     " + RESET + CYAN + "\t     8.Date:" + RESET + ORANGE + Source.getDate1() + RESET + BRIGHTBLACK + "     		         |" + RESET);
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     1.Name:" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     2.Age:" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t    3.Gender:" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     4.Mobile Number:" + RESET + ORANGE + User.getPhoneNumber() + RESET + BRIGHTBLACK + "          " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     5.Email:" + RESET + ORANGE + User.getEmail() + RESET + BRIGHTBLACK + "     		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     6.Source:" + RESET + ORANGE + Source.getSrc() + RESET + BRIGHTBLACK + "     		         " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     7.Destination:" + RESET + ORANGE + Source.getDst() + RESET + BRIGHTBLACK + "     	         " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     8.Date:" + RESET + ORANGE + Source.getDate1() + RESET + BRIGHTBLACK + "     		         " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t                                            		 " + RESET);
             System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t    ------------------------------------------------------" + RESET);
         }
 
         // After reviewing all passengers, call the payment method
         PaymentMethod.payments(passengers); // Pass the 'passengers' list here
+
     }
 }
 
@@ -1947,7 +1951,7 @@ class PhonePay extends EconomyClass {
 
 	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
 	System.out.println();
-	System.out.println(PINK+ "\t\t\t\t\t\t              ................... Passanger "+passengerNumber+" ................... " + RESET);
+	System.out.println(PINK+ "\t\t\t\t\t\t              ................... Passenger "+passengerNumber+" ................... " + RESET);
 
 	System.out.println();
 	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        "+RESET+CYAN+"\t     1.Passanger: "+RESET+ORANGE+passenger.name+RESET+BRIGHTBLACK+"          "+RESET);
@@ -1985,26 +1989,25 @@ class PhonePay extends EconomyClass {
 
 }
 
-
 class PhonePay1 extends PremiumClass {
-
     private static final double TAX_RATE = 0.10; // 10% tax rate
-    private static final double OFFER_DISCOUNT = 0.15; // Example: 15% discount
+    private static final double OFFER_DISCOUNT = 0.15; // 15% discount
     public static double grandTotal = 0;
+
     public static void phonepayment(List<Pass.Passenger> passengers) {
         if (passengers.isEmpty()) {
-		System.out.println();
-            System.out.println(RED+"\t\t\t\t\t\t\t\tNo passengers found. Please add passengers first."+RESET);
-		System.out.println();
+            System.out.println();
+            System.out.println(RED + "\t\t\t\t\t\t\t\tNo passengers found. Please add passengers first." + RESET);
+            System.out.println();
             return;
         }
 
- // Accumulate total for all passengers
-	System.out.println();
-	System.out.println(PINK+ "\t\t\t\t\t\t            ................... Payment Details ................... " + RESET);
-	System.out.println();
-	
-	int passengerNumber = 1; // Counter for passenger number
+        // Accumulate total for all passengers
+        System.out.println();
+        System.out.println(PINK + "\t\t\t\t\t\t            ................... Payment Details ................... " + RESET);
+        System.out.println();
+
+        int passengerNumber = 1; // Counter for passenger number
 
         // Iterate through passengers and calculate cost for each
         for (Pass.Passenger passenger : passengers) {
@@ -2013,12 +2016,18 @@ class PhonePay1 extends PremiumClass {
                 continue;
             }
 
+            // Calculate base cost based on selected seat
             double baseCost = switch (selectedSeat) {
                 case "A1", "A4" -> COST_A1;
                 case "A2" -> COST_A2;
                 case "A3" -> COST_A3;
                 default -> 0; // Default cost if seat is invalid
             };
+
+            // Debugging outputs for cost calculations
+            System.out.println("DEBUG: Passenger = " + passenger.name);
+            System.out.println("DEBUG: Selected Seat = " + selectedSeat);
+            System.out.println("DEBUG: Base Cost = " + baseCost);
 
             if (baseCost == 0) {
                 System.out.println("\t\t\t\t\t\t\t\t\t Invalid seat for passenger: " + passenger.name);
@@ -2037,44 +2046,52 @@ class PhonePay1 extends PremiumClass {
 
             double finalAmount = totalCost - discountAmount;
 
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
-	System.out.println();
-	System.out.println(PINK+ "\t\t\t\t\t\t              ................... Passanger "+passengerNumber+" ................... " + RESET);
-
-	System.out.println();
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        "+RESET+CYAN+"\t     1.Passanger: "+RESET+ORANGE+passenger.name+RESET+BRIGHTBLACK+"          "+RESET);
-	System.out.println();
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        "+RESET+CYAN+"\t     2.Base Cost: "+RESET+ORANGE+"$"+baseCost+RESET+BRIGHTBLACK+"     		   "+RESET);
-	System.out.println();
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        "+RESET+CYAN+"\t     3.Tax: "+RESET+ORANGE+"$"+taxAmount+RESET+BRIGHTBLACK+"     		           "+RESET);
-	System.out.println();
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        "+RESET+CYAN+"\t     4.Discount: "+RESET+ORANGE+"-$"+discountAmount+RESET+BRIGHTBLACK+"     		   "+RESET);
-	System.out.println();
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        "+RESET+CYAN+"\t     5.Final Amount(tax & discount): "+RESET+ORANGE+"$"+finalAmount+RESET+BRIGHTBLACK+"   "+RESET);
-	System.out.println();
+            // Display passenger details
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------" + RESET);
+            System.out.println();
+            System.out.println(PINK + "\t\t\t\t\t\t              ................... Passanger " + passengerNumber + " ................... " + RESET);
+            System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        " + RESET + CYAN + "\t     1.Passenger: " + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "          " + RESET);
+            System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        " + RESET + CYAN + "\t     2.Base Cost: " + RESET + ORANGE + "$" + baseCost + RESET + BRIGHTBLACK + "     		   " + RESET);
+            System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        " + RESET + CYAN + "\t     3.Tax: " + RESET + ORANGE + "$" + taxAmount + RESET + BRIGHTBLACK + "     		           " + RESET);
+            System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        " + RESET + CYAN + "\t     4.Discount: " + RESET + ORANGE + "-$" + discountAmount + RESET + BRIGHTBLACK + "     		   " + RESET);
+            System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        " + RESET + CYAN + "\t     5.Final Amount (tax & discount): " + RESET + ORANGE + "$" + finalAmount + RESET + BRIGHTBLACK + "   " + RESET);
+            System.out.println();
             // Include food costs for each passenger
             double passengerTotal = finalAmount + BillGenerator.totalAmount;
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        "+RESET+CYAN+"\t     6.Total (with food): "+RESET+ORANGE+"$"+passengerTotal+RESET+BRIGHTBLACK+"   	   "+RESET);
-	System.out.println();
-            //System.out.printf("\t\t\t\t\t\t\t\t\t   Total (with food): $%.2f\n\n", passengerTotal);
-	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t        " + RESET + CYAN + "\t     6.Total (with food): " + RESET + ORANGE + "$" + passengerTotal + RESET + BRIGHTBLACK + "   	   " + RESET);
+            System.out.println();
+
+            // Debugging output for final total calculation
+            System.out.println("DEBUG: Final amount (with food) for passenger: " + passenger.name + " = " + passengerTotal);
             grandTotal += passengerTotal;
-		
-	passengerNumber++;
 
+            passengerNumber++;
         }
-	    System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
-	System.out.println();
-	    System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
-	    System.out.println(PINK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-	    System.out.println(PINK + "\t\t\t\t\t\t\t    |    "+RESET+CYAN+"\t       Grand Total:  "+RESET+ORANGE+"$"+grandTotal+RESET+PINK+" \t\t |"+RESET);
-            System.out.println(PINK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
-	    System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
-	System.out.println();
 
- 
-   }
+        // Final Grand Total Display
+        System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------" + RESET);
+        System.out.println();
+        System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------" + RESET);
+        System.out.println(PINK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+        System.out.println(PINK + "\t\t\t\t\t\t\t    |    " + RESET + CYAN + "\t       Grand Total:  " + RESET + ORANGE + "$" + grandTotal + RESET + PINK + " \t\t |" + RESET);
+        System.out.println(PINK + "\t\t\t\t\t\t\t    |                                        		 |" + RESET);
+        System.out.println(PINK + "\t\t\t\t\t\t\t   --------------------------------------------------------" + RESET);
+        System.out.println();
+    }
 
+    // Main method
+    public static void main(String[] args) {
+        displayPremiumFeatures();
+        // Initialize your passenger list
+        List<Pass.Passenger> passengers = null; // Initialize passengers list appropriately
+        // Call the payment function after seat selection
+        phonepayment(passengers);
+    }
 }
 
 
@@ -2170,36 +2187,149 @@ class PhonePay2 extends BusinessClass {
 }
 
 
+abstract class Project
+{
+	static Scanner sc=new Scanner(System.in);
+	int cvv;
+	 boolean isCvvValid() {
+		  
+	        return (cvv >= 100 && cvv <= 999);
+	    }
+	abstract void pay(float a);
+}
+
+
+
+class Payment extends Project {
+
+    // Additional ANSI escape codes for colors
+    public static final String BRIGHTRED = "\u001B[91m";
+    public static final String BRIGHTGREEN = "\u001B[92m";
+    public static final String BRIGHTYELLOW = "\u001B[93m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String RED = "\u001B[91m";
+    public static final String RESET = "\u001B[0m";
+
+    static Scanner scan = new Scanner(System.in);
+
+    // Overriding pay method
+    @Override
+    void pay(float a) {
+        // Payment logic is delegated to individual methods
+    }
+
+    public void UPIPayment() {
+        String upid;
+        while (true) {
+            System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter UPID " + RESET);
+            upid = scan.next();
+            if (upid.length() == 14 && (upid.endsWith("@ybl") || upid.endsWith("@ibl") || upid.endsWith("@axl"))) {
+                break;
+            } else {
+                System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Wrong UPID, please try again." + RESET);
+            }
+        }
+
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter the UPI pin: " + RESET);
+        int upin = scan.nextInt();
+        if (upin >= 1000 && upin <= 9999) {
+            System.out.println(GREEN + "\t\t\t\t\t\t\t\t\t       Validation Completed" + RESET);
+        } else {
+            System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Entered a wrong UPI pin" + RESET);
+        }
+    }
+
+    public void CardPayment() {
+        String cardNumber;
+        while (true) {
+            System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter your card number: " + RESET);
+            cardNumber = scan.next();
+            if (cardNumber.length() == 16) {
+                System.out.println(GREEN + "\t\t\t\t\t\t\t\t\t       Valid card number" + RESET);
+                break;
+            } else {
+                System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Invalid card number" + RESET);
+            }
+        }
+
+        String cvv;
+        while (true) {
+            System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter the CVV number: " + RESET);
+            cvv = scan.next();
+            if (cvv.length() == 3 && cvv.matches("\\d{3}")) {
+                System.out.println(GREEN + "\t\t\t\t\t\t\t\t\t       Valid CVV number" + RESET);
+                break;
+            } else {
+                System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Invalid CVV number" + RESET);
+            }
+        }
+
+        int MM;
+        String YYYY;
+        while (true) {
+            System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter the card validity (MM/YYYY): " + RESET);
+            System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter the Month: " + RESET);
+            MM = scan.nextInt();
+            System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter the Year: " + RESET);
+            YYYY = scan.next();
+
+            if (MM >= 1 && MM <= 12) {
+                System.out.println(GREEN + "\t\t\t\t\t\t\t\t\t       Valid month" + RESET);
+            } else {
+                System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Invalid month" + RESET);
+                continue;
+            }
+
+            if (YYYY.length() == 4) {
+                int expiryYear = Integer.parseInt(YYYY);
+                int currentYear = LocalDate.now().getYear();
+                if (expiryYear >= currentYear) {
+                    System.out.println(GREEN + "\t\t\t\t\t\t\t\t\t       Valid year" + RESET);
+                    break;
+                } else {
+                    System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Card has expired, please try again." + RESET);
+                }
+            } else {
+                System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Invalid year format, please try again." + RESET);
+            }
+        }
+
+        int min = 1000;
+        int max = 9999;
+        Random rand = new Random();
+        int randomOTP = rand.nextInt(max - min + 1) + min;
+        System.out.println(RED + "\t\t\t\t\t\t\t\t       Generated OTP (Do not share): " + RESET + BRIGHTYELLOW + randomOTP + RESET);
+
+        while (true) {
+            System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter OTP: " + RESET);
+            int otp = scan.nextInt();
+            if (otp == randomOTP) {
+                System.out.println(GREEN + "\t\t\t\t\t\t\t\t\t       OTP Verified" + RESET);
+                break;
+            } else {
+                System.out.println(RED + "\t\t\t\t\t\t\t\t\t       Invalid OTP, please try again." + RESET);
+            }
+        }
+    }
+}
+
 
 class PaymentMethod {
-static Scanner sc =new Scanner(System.in);
 
-// Additional ANSI escape codes for colors
-public static final String BRIGHTRED = "\u001B[91m";
-public static final String BRIGHTGREEN = "\u001B[92m";
-public static final String BRIGHTBLUE = "\u001B[94m";
-public static final String BRIGHTWHITE = "\u001B[97m";
-public static final String DARKGRAY = "\u001B[90m";
-public static final String LIGHTGRAY = "\u001B[37m";
-public static final String BRIGHTBLACK = "\u001B[90m"; // Same as dark gray
-public static final String ORANGE = "\u001B[38;5;208m"; // Custom orange
-public static final String PURPLE = "\u001B[38;5;93m"; // Custom purple
-public static final String PINK = "\u001B[38;5;206m"; // Custom pink
-public static final String TEAL = "\u001B[38;5;45m"; // Custom teal
+    static Scanner sc = new Scanner(System.in);
 
-   // ANSI escape codes for colors
+    // ANSI escape codes for colors
+    public static final String BRIGHTRED = "\u001B[91m";
+    public static final String BRIGHTGREEN = "\u001B[92m";
+    public static final String BRIGHTBLUE = "\u001B[94m";
     public static final String RESET = "\u001B[0m";
-    public static final String GREEN = "\u001B[32m";
-    public static final String CYAN = "\u001B[36m";
-    public static final String YELLOW = "\u001B[33m";
-    public static final String MAGENTA = "\u001B[35m";
-    public static final String BLUE = "\u001B[34m";
-    public static final String RED = "\u001B[91m";
-    public static final String BRIGHTCYAN = "\u001B[96m";
-    public static final String BRIGHTMAGENTA = "\u001B[95m";
     public static final String BRIGHTYELLOW = "\u001B[93m";
+    public static final String TEAL = "\u001B[38;5;45m";
+    public static final String RED = "\u001B[91m";
 
-public static void payments(List<Pass.Passenger> passengers) {
+   public static void payments(List<Pass.Passenger> passengers) {
+
+    Payment payment = new Payment();
 
 	EconomyClass e1  = new EconomyClass();
 
@@ -2207,27 +2337,25 @@ public static void payments(List<Pass.Passenger> passengers) {
 
 	BusinessClass b1 = new BusinessClass();
 
+
     System.out.println();
-    System.out.println(BRIGHTMAGENTA + "\t\t\t\t\t\t            ---------------Select Your Payment Mode--------------- " + RESET);
-	System.out.println();
-    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter 1 for UPI " + "\n" + RESET);
-	System.out.println();
-    System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 2 for CREDIT CARD " + "\n" + RESET);
+    while (true) {
+        System.out.println();
+        System.out.println(BRIGHTBLUE + "\t\t\t\t\t\t            --------------- Select Your Payment Mode --------------- " + RESET);
+        System.out.println();
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter 1 for UPI " + "\n" + RESET);
+        System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t       Enter 2 for Credit Card " + "\n" + RESET);
+        System.out.println();
 
+        int choice = sc.nextInt();
 
-	System.out.println();
-
-rev: while (true) {
-    int x = Payments.sc.nextInt();
-
-    double amount = 0.0;
-
-    switch (x) {
-        case 1:
-            System.out.println();
-            System.out.println(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED UPI FOR PAYMENT MODE " + RESET);
-            System.out.println();
-
+        switch (choice) {
+            case 1:
+                System.out.println();
+                System.out.println(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED UPI FOR PAYMENT MODE " + RESET);
+                System.out.println();
+                payment.UPIPayment();
+	
             if (e1.getClass() == EconomyClass.class) {
                 PhonePay.phonepayment(passengers); // Pass the passengers list
             } else if (p1.getClass() == PremiumClass.class) {
@@ -2238,47 +2366,72 @@ rev: while (true) {
                 System.out.println(RED + "\t\t\t\t\t\t Select a Valid Class" + RESET);
             }
             break;
+              
 
-        default:
-            System.out.println(RED + "Invalid choice! Please select a valid payment mode." + RESET);
-            continue rev; // Retry payment mode selection
-    }
-
-    System.out.println();
-    System.out.print(RED + "\t\t\t\t\t\t         1.Payment Confirmation          2.Return          3.Exit" + "\n" + RESET);
-
-    int n = sc.nextInt();
-    if (n == 1) {
-        System.out.println();
-        System.out.print(BRIGHTRED + "\t\t\t\t\t\t\t\t\t\t" + "    Confirming" + RESET);
-
-        for (int i = 5; i >= 0; i--) {
-            System.out.print(RED + "." + RESET);
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                // Handle exception
+            case 2:
+                System.out.println();
+                System.out.println(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED Credit Card FOR PAYMENT MODE " + RESET);
+                System.out.println();
+                payment.CardPayment();
+	
+            if (e1.getClass() == EconomyClass.class) {
+                PhonePay.phonepayment(passengers); // Pass the passengers list
+            } else if (p1.getClass() == PremiumClass.class) {
+                PhonePay1.phonepayment(passengers); // Pass the passengers list
+            } else if (b1.getClass() == BusinessClass.class) {
+                PhonePay2.phonepayment(passengers); // Pass the passengers list
+            } else {
+                System.out.println(RED + "\t\t\t\t\t\t Select a Valid Class" + RESET);
             }
+            
+                break;
+
+            default:
+                System.out.println(RED + "\t\t\t\t\t\t\t\t       Invalid choice! Please select a valid payment mode." + RESET);
+                continue;
         }
+
         System.out.println();
-        System.out.println();
-        System.out.print(BRIGHTGREEN + "\t\t\t\t\t\t\t\t\t PAYMENT PROCEEDED SUCCESSFULLY " + "\n" + RESET);
-    } else if(n==2) {
-        payments(passengers);
+        System.out.print(RED + "\t\t\t\t\t\t         1. Payment Confirmation          2. Return          3. Exit" + "\n" + RESET);
+
+        int nextStep = sc.nextInt();
+
+        if (nextStep == 1) {
+            System.out.println();
+            System.out.print(BRIGHTRED + "\t\t\t\t\t\t\t\t\t\t Confirming" + RESET);
+
+            for (int i = 5; i >= 0; i--) {
+                System.out.print(RED + "." + RESET);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+            }
+
+            System.out.println();
+            System.out.println();
+            System.out.println(BRIGHTGREEN + "\t\t\t\t\t\t\t\t\t PAYMENT PROCEEDED SUCCESSFULLY " + "\n" + RESET);
+
+            // Display ticket after successful payment
+            Ticket.ticket(passengers);
+
+            // Exit the loop after successful ticket booking
+            break;
+
+        } else if (nextStep == 2) {
+            // Restart the payment process
+            continue;
+
+        } else if (nextStep == 3) {
+            System.out.print(RED + "\t\t\t\t\t\t\t\t\t Exiting the application" + RESET);
+            break;
+        } else {
+            System.out.println(RED + "\t\t\t\t\t\t\t\t       Invalid option! Please try again." + RESET);
+        }
     }
-	else if(n==3){
-                System.out.print(RED + "\t\t\t\t\t\t\t\t\t" + "Exiting the application" + RESET);
-
-		Credit.cred();
-		break;
-	}
-
-    System.out.println("                     ");
-    Ticket.ticket(passengers);
 }
 
-
-}
 }
 
 class Ticket extends View{
@@ -2315,13 +2468,15 @@ class Ticket extends View{
 
 			Source  s = new Source();
 			EconomyClass e = new EconomyClass();
-
+			PremiumClass p = new PremiumClass();
 			Ticket obj=new Ticket();
 			obj.otp();
         		String pnr = generatePNR();
         
 			System.out.print(BRIGHTGREEN + "\t\t\t\t\t\t\t\t\t\tUser Ticket " + "\n" + RESET);
-	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+            if (e.getClass() == EconomyClass.class) {
+               
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
 	System.out.println();
             System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Ticket Number: " + RESET + ORANGE + Ticket.otp() + RESET + BRIGHTBLACK + "     		         " + RESET);
 	
@@ -2343,28 +2498,70 @@ class Ticket extends View{
 	System.out.println(LIGHTGRAY+ "\t\t\t\t\t\t                              Passanger "+passengerNumber+"                " + RESET);
 
 	System.out.println();
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Name :" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t       Name :" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         " + RESET);
 	System.out.println();
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Age :" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t       Age :" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         " + RESET);
 	System.out.println();
-            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Gender :" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       " + RESET);
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t       Gender :" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       " + RESET);
 	System.out.println();
 	passengerNumber++;
-
+	
 
 	}
-          System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t       Total Price :" + RESET + ORANGE + "$"+PhonePay.grandTotal + RESET + BRIGHTBLACK + "                       " + RESET);
+          System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t      Total Price :" + RESET + ORANGE + "$"+PhonePay.grandTotal + RESET + BRIGHTBLACK + "                       " + RESET);
 
 
 	System.out.println();
 	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
 
+	}
+           else if(p.getClass() == PremiumClass.class) {
+               
+		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Ticket Number: " + RESET + ORANGE + Ticket.otp() + RESET + BRIGHTBLACK + "     		         " + RESET);
+	
+	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     PNR: " + RESET + ORANGE + pnr + RESET + BRIGHTBLACK + "     		         " + RESET);
+	
+	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Flight Number: " + RESET + ORANGE + s.a1 + RESET + BRIGHTBLACK + "     		         " + RESET);
+	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Source : " + RESET + ORANGE + Source.getSrc() + RESET + BRIGHTBLACK + "     		         " + RESET);
+		System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t     Destination: " + RESET + ORANGE + Source.getDst() + RESET + BRIGHTBLACK + "     		         " + RESET);
+	System.out.println();
 
+	int passengerNumber = 1; // Counter for passenger number
+
+
+        for (Pass.Passenger passenger : passengers) {
+	System.out.println(LIGHTGRAY+ "\t\t\t\t\t\t                              Passanger "+passengerNumber+"                " + RESET);
+
+	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t       Name :" + RESET + ORANGE + passenger.name + RESET + BRIGHTBLACK + "     		         " + RESET);
+	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t       Age :" + RESET + ORANGE + passenger.age + RESET + BRIGHTBLACK + "     		         " + RESET);
+	System.out.println();
+            System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t       Gender :" + RESET + ORANGE + passenger.gender + RESET + BRIGHTBLACK + "                       " + RESET);
+	System.out.println();
+	passengerNumber++;
+	
+
+	}
+          System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t         " + RESET + CYAN + "\t      Total Price :" + RESET + ORANGE + "$"+PhonePay1.grandTotal + RESET + BRIGHTBLACK + "                       " + RESET);
+
+
+	System.out.println();
+	    		System.out.println(BRIGHTBLACK + "\t\t\t\t\t\t\t   --------------------------------------------------------"+RESET);
+
+	}
 	System.out.println();
 
 	System.out.print(BRIGHTCYAN + "\t\t\t\t\t\t\t\t    YOUR TICKET IS BOOKED SUCCESSFULLY " + "\n" + RESET);
 
 	}
+
 }
 
 
