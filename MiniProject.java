@@ -85,7 +85,9 @@ public static final String BRIGHTRED = "\u001B[91m";
         Scanner scanner = new Scanner(System.in);
 
         // Create a User object
-        Crenditals crendital = new Crenditals("admin", "7777", 1234567890L);
+        //Crenditals crendital = new Crenditals("user", "7777", 1234567890L);
+        Crenditals crendital = new Crenditals("user", "7777", 1234567890L);
+
 
         rev: while (true) {
             // Display options
@@ -103,7 +105,7 @@ public static final String BRIGHTRED = "\u001B[91m";
             System.out.println(
                     "                   |                                  		   	[3] Exit                          		     			|");
             System.out.println(
-                    "                   ------------------------------------------------------------------------------------------------------------------------------ ");
+                    "                   ------------------------------------------------------------------------------------------------------------------------------ "+RESET);
             System.out.println("");
             System.out.println("" + RESET);
             System.out.println();
@@ -234,7 +236,7 @@ class Source extends Credit {
             System.out.println(
                     "                   |                                  		   	[3] Exit                          		     			|");
             System.out.println(
-                    "                    ----------------------------------------------------------------------------------------------------------------------------- ");
+                    "                    ----------------------------------------------------------------------------------------------------------------------------- "+RESET);
             System.out.println("");
 
             System.out.print("Enter your choice: ");
@@ -784,7 +786,7 @@ while(true){
 
 	System.out.println();
         System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
-		 System.out.println("             	   |                                                                                                                            |"+RESET);
+		 System.out.println("             	   |                                                                                                                            |");
 		System.out.println("            	   |"+RESET+RED+"\t\t\t   					5.Exit" + RESET + YELLOW +"\t\t\t\t\t\t\t        |");
 		 System.out.println("             	   |                                                                                                                            |");
         System.out.println(YELLOW + "                    ----------------------------------------------------------------------------------------------------------------------------- ");
@@ -1477,6 +1479,7 @@ abstract class Primary_Details {
 
 class User extends Primary_Details {
 
+
     private static String email;       // Static variable for email
     private static String phoneNumber; // Static variable for phone number
 
@@ -1526,8 +1529,10 @@ class User extends Primary_Details {
                 System.out.println();
                 System.out.println(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t   Enter the Phone Number: " + RESET);
                 phoneNumber = sc.next(); // Assign to the static variable
+
                 if (obj.isMobileNumberValid(phoneNumber)) {
                     int phoneOtp = obj.generateOtp();
+		
                     if (obj.validateOtp(phoneOtp)) {
                         isPhoneVerified = true;
                         System.out.println();
@@ -1979,18 +1984,47 @@ public static void payments(List<Pass.Passenger> passengers) {
 	//System.out.println();
     //System.out.print(BRIGHTYELLOW + "\t\t\t\t\t\t\t\t\t     Enter 5 for MASTERCARD CREDIT " + "\n" + RESET);
 
-
+rev: while(true){
     int x = Payments.sc.nextInt();  
 
     double amount = 0.0;
 
     switch (x) {
-        case 1:
-		System.out.println();
-    		System.out.print(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED UPI FOR PAYMENT MODE " + "\n" + RESET);
+  case 1:
+    System.out.println();
+    System.out.println(TEAL + "\t\t\t\t\t\t\t\t     YOU HAVE SELECTED UPI FOR PAYMENT MODE " + RESET);
+    System.out.println();
 
-            PhonePay.phonepayment(passengers); // Pass the passengers list
-            break;
+    // Prompt for UPI ID
+    System.out.print("       UPI ID: ");
+    String uid = sc.next(); // Capture UPI ID
+	if(uid.equals(User.getPhoneNumber())){
+		System.out.println("gggggggggggggggggggggggg");
+		}
+else{
+System.out.println("Invalid UPI");
+
+}
+
+    System.out.println();
+	 
+ 
+    // Display UPI ID
+   // System.out.println("       UPI ID: " + uid);
+    System.out.println();
+   int upipin=sc.nextInt();
+ 
+    // Mask the UPI PIN input
+    System.out.print("\n       UPI PIN: ");
+    //for (char c : upiPin) {
+        System.out.print("*"); // Display masked PIN
+    //}
+    System.out.println("\n");
+
+    // Process the payment
+    PhonePay.phonepayment(passengers); // Pass the passengers list
+    break;
+
 
         case 2:
             System.out.println("       YOUR SELECTED CREDIT CARD FOR PAYMENT MODE         ");
@@ -2046,7 +2080,7 @@ System.out.println();
 
 }
 
-
+}
 class Ticket extends View{
 
 	public static String generatePNR() {
@@ -2181,10 +2215,10 @@ class Welcome {
                 + "                    =-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= "
                 + RESET);
 
-        Credit.cred();
+       // Credit.cred();
 
         
-	Source.source();
+	//Source.source();
 	
 	Choose.choose();
 
